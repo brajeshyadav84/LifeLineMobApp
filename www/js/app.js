@@ -72,7 +72,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/tour',
      views: {
         'menuContent' :{
-          templateUrl: "templates/tour/tour.html",
+          templateUrl: "templates/Tour/tour.html",
           controller: 'DashCtrl'
         }
       }       
