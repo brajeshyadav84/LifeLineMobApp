@@ -1,1 +1,25 @@
 /* Empty. Add your own CSS if you like */
+.landing_bg{
+	background-color: #aa1d1d;
+	color: white;
+}
+
+.lending-content{
+	display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.innner-div{
+	height: 100px;
+    width: 95px;
+    border-radius: 25px;
+    background-color: white;
+    color: red;
+}
+
+.scroll{
+	height: 100%;
+}
