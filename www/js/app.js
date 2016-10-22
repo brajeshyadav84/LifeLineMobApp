@@ -67,9 +67,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'DashCtrl'
         }
       }
-  });
+  })  
+    .state('app.tour', {
+      url: '/tour',
+     views: {
+        'menuContent' :{
+          templateUrl: "templates/tour/tour.html",
+          controller: 'DashCtrl'
+        }
+      }       
+
+      });
+
+  
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/dashboard');
+  $urlRouterProvider.otherwise('/app/tour');
 
 });
