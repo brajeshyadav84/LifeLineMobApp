@@ -31,20 +31,35 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  // setup an abstract state for the tabs directive
-  .state('dashboard', {
-    url: '/dashboard',
-    abstract: false,
-    templateUrl: 'templates/tab-dash.html'
+  .state('app', {
+      url: "/app",
+      abstract: true,
+      templateUrl: "templates/menu.html"
   })
 
+  // setup an abstract state for the tabs directive
+  .state('app.dashboard', {
+      url: "/dashboard",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/tab-dash.html",
+          controller: 'DashCtrl'
+        }
+      }
+    })
+
   // Each tab has its own nav history stack:
-  .state('helpme', {
+  .state('app.helpme', {
       url: '/helpme',
-      templateUrl: 'templates/tab-helpme.html'
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/tab-helpme.html",
+          controller: 'DashCtrl'
+        }
+      }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/dashboard');
+  $urlRouterProvider.otherwise('/app/dashboard');
 
 });
