@@ -67,7 +67,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'DashCtrl'
         }
       }
-  })  
+  })    
+  .state('app.BBlist', {
+      url: '/BBlist', 
+      views: {
+        'menuContent' :{    
+      templateUrl: "templates/BloodBankList.html",
+      controller: 'BBListCtrl'
+        }
+      }
+        })  
     .state('tour', {
       url: '/tour',
       templateUrl: "templates/Tour/tour.html"

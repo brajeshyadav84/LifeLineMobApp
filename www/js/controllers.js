@@ -10,5 +10,10 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {
 	localStorage.setItem("isFirstTime", true);
+})
+
+.controller('BBListCtrl', function($scope) {
+	localStorage.setItem("isFirstTime", true);
 });
+
 
