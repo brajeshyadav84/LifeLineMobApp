@@ -4,11 +4,11 @@ angular.module('starter.controllers', [])
 	if(localStorage.isFirstTime){
 		$state.go("app.dashboard");
 	} else {
-		$state.go("app.tour");
+		$state.go("tour");
 	}
 })
 
 .controller('DashCtrl', function($scope) {
-	//localStorage.setItem("isFirstTime", true);
+	localStorage.setItem("isFirstTime", true);
 });
 

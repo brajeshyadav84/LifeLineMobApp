@@ -68,15 +68,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
   })  
-    .state('app.tour', {
+    .state('tour', {
       url: '/tour',
-     views: {
-        'menuContent' :{
-          templateUrl: "templates/Tour/tour.html",
-          controller: 'DashCtrl'
-        }
-      }       
-
+      templateUrl: "templates/Tour/tour.html"
       });
 
   
