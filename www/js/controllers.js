@@ -1,18 +1,27 @@
 angular.module('starter.controllers', [])
 
-.controller('MainCtrl', function($scope, $state, $stateParams) {
-	if(localStorage.isFirstTime){
-		$state.go("app.dashboard");
-	} else {
-		$state.go("tour");
-	}
+.controller('MainCtrl', function ($scope, $state, $stateParams) {
+    if (localStorage.isFirstTime) {
+        $state.go("app.dashboard");
+    } else {
+        $state.go("tour");
+    }
 })
 
-.controller('DashCtrl', function($scope) {
-	localStorage.setItem("isFirstTime", true);
+.controller('DashCtrl', function ($scope) {
+    localStorage.setItem("isFirstTime", true);
 })
 
 .controller('BBListCtrl', function($scope, lifeLineService) {
+    //Fetching Country List
+    $http.get('https://ionic-in-action-api.herokuapp.com/weather')
+.success(function (weather) {
+    $scope.weather = weather;
+}).error(function (err) {
+});
+
+
+
     $scope.groups = [];
     for (var i = 0; i < 10; i++) {
         $scope.groups[i] = {
