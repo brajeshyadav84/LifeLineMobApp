@@ -8,19 +8,34 @@
   </ion-pane>
 
   <ion-side-menu side="left" >
-    <header class="bar bar-header bar-stable">
-      <h1 class="title"></h1>
-    </header>
+      <ion-header-bar class="bar-stable">
+          <h1 class="title"><span>Life</span><span style="color:red">Line</span></h1>
+      </ion-header-bar>
     <ion-content class="has-header">
       <ion-list>
-        <ion-item nav-clear menu-close href="#/app/dashboard">
-          Home
+        <ion-item class="item-icon-left" nav-clear menu-close href="#/app/dashboard">
+            <span class="icon ion-ios-home">
+            </span> Home
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/addContact">
-          Add Contact
+          
+        <ion-item  class="item-icon-left" nav-clear menu-close href="#/app/addContact">
+            <span class="icon ion-ios-contact-outline">
+            </span> Contact US
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/addContact">
-          Add Contact
+
+          <ion-item class="item-icon-left" nav-clear menu-close href="#/app/dashboard">
+              <span class="icon ion-share">
+              </span> Share APP
+          </ion-item>
+
+          <ion-item class="item-icon-left" nav-clear menu-close href="#/app/dashboard">
+              <span class="icon ion-ios-compose">
+              </span> FeedBack
+          </ion-item>
+
+        <ion-item class="item-icon-left" nav-clear menu-close href="#/app/addContact">
+            <span class="icon ion-ios-cog">
+            </span> Settings
         </ion-item>
       </ion-list>
     </ion-content>
