@@ -7,6 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -22,6 +23,31 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
 })
+.factory('Countries', function ($http) {
+
+    var Countries = [];
+    var Cities = [];
+
+
+        return {
+            getCountries: function () {
+                return $http.get("http://api.geonames.org/childrenJSON?geonameId=1269750&username=sinnitesh").then(function (response) {
+                    Countries = response;
+                    return Countries;
+                }, function (error) {
+                    return error;
+                });
+            },
+            getCities: function (id) {
+                return $http.get("http://api.geonames.org/childrenJSON?geonameId="+id+"&username=sinnitesh").then(function (response) {
+                    Countries = response;
+                    return Countries;
+                }, function (error) {
+                    return error;
+                });
+            }
+        }
+    })
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -88,3 +114,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   //$urlRouterProvider.otherwise('/app/dashboard');
 
 });
+
+

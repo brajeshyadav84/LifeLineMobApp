@@ -12,17 +12,47 @@ angular.module('starter.controllers', [])
     localStorage.setItem("isFirstTime", true);
 })
 
-.controller('BBListCtrl', function($scope, lifeLineService) {
-    //Fetching Country List
-    $http.get('https://ionic-in-action-api.herokuapp.com/weather')
-.success(function (weather) {
-    $scope.weather = weather;
-}).error(function (err) {
-});
-
-
-
+.controller('BBListCtrl', function ($scope, $state, Countries) {
     $scope.groups = [];
+    $scope.countries = [];
+    $scope.cities = [];
+    //Fetching Country List    
+    Countries.getCountries().then(function (response) {
+
+
+        for (var i = 0; i < response.data.totalResultsCount; i++) {
+            $scope.countries[i] = {
+                name: response.data.geonames[i].name,
+                id: response.data.geonames[i].geonameId
+            };
+        }
+
+       
+        for (var i = 0; i < response.data.totalResultsCount; i++) {
+            $scope.countries[i] = {
+                name: response.data.geonames[i].name,
+                id: response.data.geonames[i].geonameId
+                };
+        }
+
+    });
+    //Update Cities
+    $scope.updateCities = function (city_id) {
+        console.log(city_id);     
+        Countries.getCities(city_id).then(function (response) {
+            for (var i = 0; i < response.data.totalResultsCount; i++) {
+                $scope.cities[i] = {
+                    name: response.data.geonames[i].name,
+                    id: response.data.geonames[i].geonameId
+                };
+            }
+            console.log($scope.cities);
+        });
+    
+    }
+
+    //Update list items
+
     for (var i = 0; i < 10; i++) {
         $scope.groups[i] = {
             name: i,
@@ -48,19 +78,9 @@ angular.module('starter.controllers', [])
     $scope.isGroupShown = function (group) {
         return $scope.shownGroup === group;
     };
-
-    ////
-    //// service call
-    ////
-    var request = {};
-    var serviceUrl = "";
-
-    lifeLineService.postExternalUrl(request, serviceUrl).then(function(response){
-           console.log(response);
-        },function(error){
-        console.log(error);
-    });
-
 });
+
+    
+    
 
 
