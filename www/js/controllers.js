@@ -12,7 +12,7 @@ angular.module('starter.controllers', [])
 	localStorage.setItem("isFirstTime", true);
 })
 
-.controller('BBListCtrl', function($scope) {
+.controller('BBListCtrl', function($scope, lifeLineService) {
     $scope.groups = [];
     for (var i = 0; i < 10; i++) {
         $scope.groups[i] = {
@@ -39,6 +39,19 @@ angular.module('starter.controllers', [])
     $scope.isGroupShown = function (group) {
         return $scope.shownGroup === group;
     };
+
+    ////
+    //// service call
+    ////
+    var request = {};
+    var serviceUrl = "";
+
+    lifeLineService.postExternalUrl(request, serviceUrl).then(function(response){
+           console.log(response);
+        },function(error){
+        console.log(error);
+    });
+
 });
 
 
