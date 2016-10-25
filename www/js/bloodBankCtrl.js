@@ -1,6 +1,6 @@
 //angular.module('starter.controllers', [])
 
-LifeLine.controller('bloodBankCtrl', function ($scope, $state, BloodBankPage) {
+LifeLine.controller('bloodBankCtrl', function ($scope, $state, BloodBankPage, lifeLineService) {
     $scope.groups = [];
     $scope.countries = [];
     $scope.cities = [];
@@ -8,10 +8,12 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state, BloodBankPage) {
 
 
     };
-    //Fetching Country List    
-    BloodBankPage.getCountries().then(function (response) {
 
+    var request = {};
+    var serviceUrl = URLS.getCountryDetails;
 
+    lifeLineService.postExternalUrl(request, serviceUrl).then(function(response){
+        console.log("bloodbank");
         for (var i = 0; i < response.data.totalResultsCount; i++) {
             $scope.countries[i] = {
                 name: response.data.geonames[i].name,
@@ -19,15 +21,36 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state, BloodBankPage) {
             };
         }
 
-
         for (var i = 0; i < response.data.totalResultsCount; i++) {
             $scope.countries[i] = {
                 name: response.data.geonames[i].name,
                 id: response.data.geonames[i].geonameId
             };
         }
-
+    },function(error){
+        console.log(error);
     });
+
+    //Fetching Country List    
+    // BloodBankPage.getCountries().then(function (response) {
+
+
+    //     for (var i = 0; i < response.data.totalResultsCount; i++) {
+    //         $scope.countries[i] = {
+    //             name: response.data.geonames[i].name,
+    //             id: response.data.geonames[i].geonameId
+    //         };
+    //     }
+
+
+    //     for (var i = 0; i < response.data.totalResultsCount; i++) {
+    //         $scope.countries[i] = {
+    //             name: response.data.geonames[i].name,
+    //             id: response.data.geonames[i].geonameId
+    //         };
+    //     }
+
+    // });
     //Update Cities
     $scope.updateCities = function (city_id) {
         BloodBankPage.getCities(city_id).then(function (response) {
