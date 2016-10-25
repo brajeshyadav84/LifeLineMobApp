@@ -4,7 +4,7 @@
 var URLS = {};
 
 URLS = {
-	getBloodBankDetails : "",
+	getCountryDetails : "http://api.geonames.org/childrenJSON?geonameId=1269750&username=sinnitesh",
 	getHospitalDetails : ""
 }
 

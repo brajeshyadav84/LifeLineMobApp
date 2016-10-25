@@ -1,6 +1,6 @@
-angular.module('starter.services', [])
+//angular.module('starter.services', [])
 
-    .service('lifeLineService',function($http,$q,$ionicLoading,$timeout){
+    LifeLine.service('lifeLineService',function($http,$q,$ionicLoading,$timeout){
 
     	return {
     		postLifeLineAPI: function (Request, serviceMethod) {
