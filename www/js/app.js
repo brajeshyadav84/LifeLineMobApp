@@ -5,10 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+var LifeLine = angular.module('starter', ['ionic']);
 
 
-.run(function($ionicPlatform) {
+LifeLine.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -23,56 +23,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
 })
-.factory('BloodBankPage', function ($http) {
 
-    var Countries = [];
-    var Cities = [];
-    var BloodBanks = [];
-
-
-        return {
-            getCountries: function () {
-                return $http.get("http://api.geonames.org/childrenJSON?geonameId=1269750&username=sinnitesh").then(function (response) {
-                    Countries = response;
-                    return Countries;
-                }, function (error) {
-                    return error;
-                });
-            },
-            getCities: function (id) {
-                return $http.get("http://api.geonames.org/childrenJSON?geonameId="+id+"&username=sinnitesh").then(function (response) {
-                    Cities = response;
-                    return Cities;
-                }, function (error) {
-                    return error;
-                });
-            },
-            getbloodBanks: function (id) {
-                var res_id = "e16c75b6-7ee6-4ade-8e1f-2cd3043ff4c9";
-                var api_key = "9555f4b13e18327cb4a655f672c4fb37";
-                var filterColumnName = "district";
-                var filterColumnValue = id;
-                var fields = "state,city,district,h_name,address,pincode,contact,helpline,email,service_time";
-                var sortcolumnName = "district";
-                var offset="1";
-                var no_elements = "100";
-                var link = "http://data.gov.in/api/datastore/resource.json"
-                            +"?resource_id="+ res_id
-                            + "&api-key=" + api_key
-                            + "&filters[" + filterColumnName + "]=" + filterColumnValue
-                            + "&fields=" + fields
-                            + "&sort[" + sortcolumnName + "]=asc"
-
-                return $http.get(link).then(function (response) {
-                    BloodBanks = response;
-                    return BloodBanks;
-                }, function (error) {
-                    return error;
-                });
-            }
-        }
-    })
-.config(function($stateProvider, $urlRouterProvider) {
+LifeLine.config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -83,7 +35,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   .state('app', {
       url: "/app",
       abstract: true,
-      templateUrl: "templates/menu.html"
+      templateUrl: "templates/SideMenu.html"
   })
 
   // setup an abstract state for the tabs directive
@@ -91,8 +43,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: "/dashboard",
       views: {
         'menuContent' :{
-          templateUrl: "templates/tab-dash.html",
-          controller: 'DashCtrl'
+          templateUrl: "templates/Dashboard.html",
+          controller: 'dashboardCtrl'
         }
       }
     })
@@ -102,8 +54,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/addContact',
       views: {
         'menuContent' :{
-          templateUrl: "templates/tab-addContact.html",
-          controller: 'DashCtrl'
+          templateUrl: "templates/ContactUs.html",
+          controller: 'dashboardCtrl'
         }
       }
   })
@@ -112,8 +64,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/helpme',
       views: {
         'menuContent' :{
-          templateUrl: "templates/tab-helpme.html",
-          controller: 'DashCtrl'
+          templateUrl: "templates/HelpMe.html",
+          controller: 'dashboardCtrl'
         }
       }
   })    
@@ -122,19 +74,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'menuContent' :{    
       templateUrl: "templates/BloodBankList.html",
-      controller: 'BBListCtrl'
+      controller: 'bloodBankCtrl'
         }
       }
         })  
-    .state('tour', {
+  .state('tour', {
       url: '/tour',
-      templateUrl: "templates/Tour/tour.html"
-      });
+      templateUrl: "templates/Tour/Welcome.html"
+  });
 
   
 
   // if none of the above states are matched, use this as the fallback
-  //$urlRouterProvider.otherwise('/app/dashboard');
+  $urlRouterProvider.otherwise('/app/dashboard');
 
 });
 
