@@ -38,7 +38,7 @@
                           ng-class="{active: isGroupShown(group)}">
                     <i class="icon" ng-class="isGroupShown(group) ? 'ion-chevron-down custom-chevron-down' : 'ion-chevron-right'"></i>
                     &nbsp;
-                    {{group.city}}
+                   {{group.h_name}} , {{group.city}}
                 </ion-item>
                 <ion-item class="item-accordion"
                           ng-repeat="item in group.items"
@@ -56,10 +56,10 @@
                         </div>
                         <div class="item item-divider">
                             <div >
-                                <i class="icon item-icon-right ion-ios-telephone custom-ios-telephone">{{item.helpline}}</i>
-                                <i class="icon item-icon-right ion-android-textsms custom-android-textsms">{{item.email}}</i>
+                                <a href="tel:{{item.helpline}}"><i class="icon item-icon-right ion-ios-telephone custom-ios-telephone"></i></a>
+                                <a href="mailto:{{item.email}}"><i class="icon item-icon-right ion-android-textsms custom-android-textsms"></i></a>
 
-                            </div>
+</div>
                         </div>
                     </div>
                     <!--<div class="accordionleftDiV">{{item.address}}</div>
