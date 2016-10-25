@@ -31,26 +31,6 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state, BloodBankPage, li
         console.log(error);
     });
 
-    //Fetching Country List    
-    // BloodBankPage.getCountries().then(function (response) {
-
-
-    //     for (var i = 0; i < response.data.totalResultsCount; i++) {
-    //         $scope.countries[i] = {
-    //             name: response.data.geonames[i].name,
-    //             id: response.data.geonames[i].geonameId
-    //         };
-    //     }
-
-
-    //     for (var i = 0; i < response.data.totalResultsCount; i++) {
-    //         $scope.countries[i] = {
-    //             name: response.data.geonames[i].name,
-    //             id: response.data.geonames[i].geonameId
-    //         };
-    //     }
-
-    // });
     //Update Cities
     $scope.updateCities = function (city_id) {
         BloodBankPage.getCities(city_id).then(function (response) {
@@ -60,14 +40,13 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state, BloodBankPage, li
                     id: response.data.geonames[i].geonameId
                 };
             }
-            $scope.groups = [];
-            //console.log($scope.cities);
         });
 
     }
 
     $scope.updatebloodBanks = function (objSelected) {
         console.log(objSelected);
+        $scope.groups = [];
         BloodBankPage.getbloodBanks(objSelected.ID.name).then(function (response) {
             console.log(response.data);
             if (response.data.success) {
