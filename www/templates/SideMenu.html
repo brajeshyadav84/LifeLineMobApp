@@ -1,0 +1,44 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button class="button-clear" ><i class="icon ion-chevron-left"></i></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left" >
+      <ion-header-bar class="bar-stable">
+          <h1 class="title"><span>Life</span><span style="color:red">Line</span></h1>
+      </ion-header-bar>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item class="item-icon-left" nav-clear menu-close href="#/app/dashboard">
+            <span class="icon ion-ios-home">
+            </span> Home
+        </ion-item>
+          
+        <ion-item  class="item-icon-left" nav-clear menu-close href="#/app/addContact">
+            <span class="icon ion-ios-contact-outline">
+            </span> Contact US
+        </ion-item>
+
+          <ion-item class="item-icon-left" nav-clear menu-close href="#/app/dashboard">
+              <span class="icon ion-share">
+              </span> Share APP
+          </ion-item>
+
+          <ion-item class="item-icon-left" nav-clear menu-close href="#/app/dashboard">
+              <span class="icon ion-ios-compose">
+              </span> FeedBack
+          </ion-item>
+
+        <ion-item class="item-icon-left" nav-clear menu-close href="#/app/addContact">
+            <span class="icon ion-ios-cog">
+            </span> Settings
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>
