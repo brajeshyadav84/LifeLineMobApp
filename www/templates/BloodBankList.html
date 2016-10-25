@@ -27,28 +27,47 @@
                     Select City
                 </div>
 
-                <select>
-                    <option>--Select City--</option>
-                    <option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>
+                <select id="cityID" name="cityId" ng-model="cities.SelectedOption.ID" ng-change="updatebloodBanks(cities.SelectedOption)" ng-options="city as city.name for city in cities">
+                    <option value="" selected>Select the city</option>
+                    <!--<option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>-->
                 </select>
             </label>
-            <div ng-repeat="group in groups">
+            <div ng-model="group.city" ng-repeat="group in groups">
                 <ion-item class="item-stable  item-icon-right"
                           ng-click="toggleGroup(group)"
                           ng-class="{active: isGroupShown(group)}">
                     <i class="icon" ng-class="isGroupShown(group) ? 'ion-chevron-down custom-chevron-down' : 'ion-chevron-right'"></i>
                     &nbsp;
-                    Blood Bank {{group.name}}
+                    {{group.city}}
                 </ion-item>
                 <ion-item class="item-accordion"
                           ng-repeat="item in group.items"
                           ng-show="isGroupShown(group)">
-                    <div class="accordionleftDiV">{{item}}</div>
+                    <div class="card">
+                        <div class="item item-divider">
+                            {{item.h_name}}
+                        </div>
+                        <div class="item item-text-wrap" style="font-family:Verdana,sans-serif">
+                            Address:{{item.district}},{{item.address}}
+                            <br />                           
+                            Postal: {{item.pincode}}<br />
+                            Service Time :{{item.service_time}}                            
+
+                        </div>
+                        <div class="item item-divider">
+                            <div >
+                                <i class="icon item-icon-right ion-ios-telephone custom-ios-telephone">{{item.helpline}}</i>
+                                <i class="icon item-icon-right ion-android-textsms custom-android-textsms">{{item.email}}</i>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="accordionleftDiV">{{item.address}}</div>
                     <div class="accordionrightDiV">
                         <i class="icon item-icon-right ion-ios-telephone custom-ios-telephone"></i>
                         <i class="icon item-icon-right ion-android-textsms custom-android-textsms"></i>
 
-                    </div>
+                    </div>-->
                     
                 </ion-item>
             </div>
