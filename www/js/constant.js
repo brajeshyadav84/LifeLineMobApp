@@ -18,7 +18,8 @@ var bloodBankParam = {};
 bloodBankParam = {
  res_id :"e16c75b6-7ee6-4ade-8e1f-2cd3043ff4c9",
  api_key :"9555f4b13e18327cb4a655f672c4fb37",
- filterColumnName :"district",
+ filterColumnName: "state",
+ filterColumnName1: "city",
  fields :"state,city,district,h_name,address,pincode,contact,helpline,email,service_time",
  sortcolumnName :"district",
  offset:"1",

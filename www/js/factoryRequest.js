@@ -48,4 +48,17 @@ LifeLine.factory('BloodBankPage', function ($http) {
                 });
             }
         }
-    })
+})
+LifeLine.factory('loadLocaljson', function ($http) {
+    var mainInfo = [];
+    return {
+        get: function () {
+            //$http.get('js/cities.json'); // this will return a promise to controller
+            $http.get('js/cities.json').success(function (data) {
+                console.log(data);
+                mainInfo = data;
+
+            });
+        }
+    }
+});
