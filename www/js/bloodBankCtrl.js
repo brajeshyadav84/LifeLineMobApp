@@ -130,7 +130,8 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state,$ionicLoading , Bl
 
                     }
                 }
-                console.log($scope.groups.length);
+                //$scope.groups.sort();
+                //console.log($scope.groups.length);
 
             });
         }

@@ -17,18 +17,18 @@
                     Select State
                 </div>
 
-                <select id="StateID" name="geonameId" ng-model="item.SelectedOption.ID" ng-change="updateCities(item.SelectedOption)" ng-options="item as item.name for item in countries">
+                <select id="StateID" name="geonameId" ng-model="item.SelectedOption.ID" ng-change="updateCities(item.SelectedOption)" ng-options="item as item.name for item in countries|orderBy:'name'">
                     <option value="" selected>Select the state</option>
                     <!--<option ng-repeat="country in countries" value="{{country.id}}">{{country.name}}</option>-->               
                 </select>
             </label>
             <label class="item item-input item-select item-assertive">
                 <div class="input-label">
-                    Select District
+                    Select City
                 </div>
 
-                <select id="cityID" name="cityId" ng-model="cities.SelectedOption.ID" ng-change="updatebloodBanks(cities.SelectedOption)" ng-options="city as city.name for city in cities">
-                    <option value="" selected>Select the district</option>
+                <select id="cityID" name="cityId" ng-model="cities.SelectedOption.ID" ng-change="updatebloodBanks(cities.SelectedOption)" ng-options="city as city.name for city in cities|orderBy:'name'">
+                    <option value="" selected>Select the city</option>
                     <!--<option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>-->
                 </select>
             </label>

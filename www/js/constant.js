@@ -21,7 +21,7 @@ bloodBankParam = {
  filterColumnName: "state",
  filterColumnName1: "city",
  fields :"state,city,district,h_name,address,pincode,contact,helpline,email,service_time",
- sortcolumnName :"city",
+ sortcolumnName :"h_name",
  offset:"1",
  no_elements :"100"
 }
