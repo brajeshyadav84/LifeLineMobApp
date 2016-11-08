@@ -1,16 +1,9 @@
 [
   {
     "id": "1",
-    "state": "",
-    "cityname": [
-      "NA"
-    ]
-  },
-  {
-    "id": "1",
     "state": "Andaman and Nicobar Islands",
     "cityname": [
-      "NA"
+      "Port Blair"
     ]
   },
   {
@@ -224,7 +217,7 @@
   },
   {
     "id": "8",
-    "state": "",
+    "state": "Dadra and Nagar Haveli",
     "cityname": [
       "Silvassa"
     ]
