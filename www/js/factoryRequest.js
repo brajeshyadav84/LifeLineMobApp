@@ -54,7 +54,7 @@ LifeLine.factory('loadLocaljson', function ($http) {
     return {
         get: function () {
             //$http.get('js/cities.json'); // this will return a promise to controller
-            $http.get('js/cities.json').success(function (data) {
+            return $http.get('js/citylist.json').then(function (data) {
                 console.log(data);
                 mainInfo = data;
 

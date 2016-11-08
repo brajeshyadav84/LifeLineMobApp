@@ -123,9 +123,9 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state, BloodBankPage,loa
     }
 
 
-    //loadLocaljson.get().then(function (response) {
-    //    $scope.list = response.data.contentItem;
-    //});
+    loadLocaljson.get().then(function (response) {
+       console.log(response);
+    });
 
     /*
      * if given group is the selected group, deselect it
