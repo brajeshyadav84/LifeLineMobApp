@@ -44,12 +44,9 @@
                           ng-repeat="item in group.items"
                           ng-show="isGroupShown(group)">
                     <div class="card">
-                        <div class="item item-divider">
-                            {{item.h_name}}
-                        </div>
                         <div class="item item-text-wrap" style="font-family:Verdana,sans-serif">
-                            Address:{{item.district}},{{item.address}}
-                            <br />                           
+                        Name: {{item.h_name}}<br/>
+                            Address:{{item.district}},{{item.address}} <br />                           
                             Postal: {{item.pincode}}<br />
                             Service Time :{{item.service_time}}                            
 
