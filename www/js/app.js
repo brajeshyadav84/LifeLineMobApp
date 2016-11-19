@@ -79,7 +79,7 @@ LifeLine.config(function($stateProvider, $urlRouterProvider) {
       }
         })  
   .state('app.Hospitality', {
-      url: '/Hospitality', 
+      url: '/Hospitality/:hospitalityType', 
       views: {
         'menuContent' :{    
       templateUrl: "templates/Hospitality.html",

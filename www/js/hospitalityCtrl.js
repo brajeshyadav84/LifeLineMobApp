@@ -1,6 +1,9 @@
 
-LifeLine.controller('hospitalityCtrl', function ($scope, $state, $ionicLoading , BloodBankPage, loadLocaljson, lifeLineService) {
+LifeLine.controller('hospitalityCtrl', function ($scope, $state, $stateParams, $ionicLoading , BloodBankPage, loadLocaljson, lifeLineService) {
     
+    console.log("$stateParams");
+    $scope.hospitalityType = $stateParams.hospitalityType;
+
 	$scope.groups = [];
     $scope.countries = [];
     $scope.cities = [];
