@@ -1,3 +1,11 @@
+///
+/// key details
+///
+var googleAPI = {};
+googleAPI = {
+	apiKey: 'AIzaSyBDVA-uP2IUHFYftEYyOm8BtQh7zthakAk'
+}
+
 ////
 //// External URL
 ////
@@ -6,7 +14,8 @@ var URLS = {};
 URLS = {
 	getCountryDetails : "http://api.geonames.org/childrenJSON?geonameId=1269750&username=sinnitesh",
 	getCityDetails: "http://api.geonames.org/childrenJSON?geonameId=",
-	getBloodBankDetails: "http://data.gov.in/api/datastore/resource.json"
+	getBloodBankDetails: "http://data.gov.in/api/datastore/resource.json",
+	getHospitalityDetails: "https://maps.googleapis.com/maps/api/place/textsearch/json?key="+googleAPI.apiKey
 }
 
 
