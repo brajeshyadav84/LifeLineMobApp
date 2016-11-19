@@ -1,7 +1,6 @@
 
 LifeLine.controller('hospitalityCtrl', function ($scope, $state, $stateParams, $ionicLoading , BloodBankPage, loadLocaljson, lifeLineService) {
     
-    console.log("$stateParams");
     $scope.hospitalityType = $stateParams.hospitalityType;
 
 	$scope.groups = [];
@@ -60,13 +59,13 @@ LifeLine.controller('hospitalityCtrl', function ($scope, $state, $stateParams, $
 	 }
 
 	$scope.updateDetails = function (objSelected) {
-
+        console.log(objSelected);
         $scope.groups = [];
         var request = {};
         $scope.showLoading();
         
         var request = {};
-	    var serviceUrl = URLS.getHospitalityDetails + '&query=hospital+in+kanpur';
+	    var serviceUrl = URLS.getHospitalityDetails + '&query='+$scope.hospitalityType+'in'+ objSelected.ID.name;
 	    lifeLineService.postExternalUrl(request, serviceUrl).then(function (response) {
 	        console.log("response");console.log(response.data.results);
 	        $scope.groups = response.data.results;
