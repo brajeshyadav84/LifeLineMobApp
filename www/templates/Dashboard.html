@@ -2,8 +2,8 @@
 	<ion-nav-title>
 		<div class="rd-navbar-brand">
 			<a href="#/app/dashboard" class="brand-name primary-color">
-				<span class="icon icon-md icon-primary"><i class="icon ion-ios-home"></i></span>
-				<h1 style="top: -10px;"><span>Life</span><span class="text-primary">Line</span></h1>
+				<!-- <span class="icon icon-md icon-primary"><i class="icon ion-ios-home"></i></span> -->
+				<h1><span>Life</span><span class="text-primary">Line</span></h1>
 			</a>
 		</div>
 	</ion-nav-title>
@@ -25,14 +25,23 @@
 		          	</span>
 		        	</div>
 					<div class="col">
-		            <a href="#/app/BBlist">
+		            <!-- <a href="#/app/BBlist">
 		                <span class="icon icon-xl icon-grayscale-darken  ion-waterdrop">
 		          		<p class="big">
 							Blood Banks
 						</p>
 			            </span>
-			        </a>
+			        </a> -->
 		          	</div>
+		          	<div class="col">
+					<a> 
+					<span class="icon icon-xl icon-grayscale-darken  ion-medkit">
+			            <p class="big">
+							Help me
+						</p>
+			        </span>
+			        </a>
+			        </div>
 				</div>
 				<div class="row">
 					<div class="col">
@@ -53,9 +62,7 @@
 			        </span>
 			        </a>
 			        </div>
-				</div>
-				<div class="row">
-					<div class="col">
+			        <div class="col">
 					<a ng-Click="onClickHospitality('Dentist')"> 
 					<span class="icon icon-xl icon-grayscale-darken  ion-medkit">
 			            <p class="big">
@@ -64,6 +71,9 @@
 			        </span>
 			        </a>
 			        </div>
+				</div>
+				<div class="row">
+					
 					<div class="col"> 
 					<a ng-Click="onClickHospitality('Pharmacy')">
 					<span class="icon icon-xl icon-grayscale-darken  ion-speakerphone">
@@ -73,25 +83,26 @@
 			        </span>
 			        </a>
 			        </div>
-				</div>
-				<div class="row">
-					<div class="col">
-					<a> 
-					<span class="icon icon-xl icon-grayscale-darken  ion-medkit">
-			            <p class="big">
-							Help me
+			        <div class="col">
+		            <!-- <a href="#/app/BBlist">
+		                <span class="icon icon-xl icon-grayscale-darken  ion-waterdrop">
+		          		<p class="big">
+							Blood Banks
 						</p>
-			        </span>
+			            </span>
+			        </a> -->
+		          	</div>
+			        <div class="col">
+		            <a href="#/app/BBlist">
+		                <span class="icon icon-xl icon-grayscale-darken  ion-waterdrop">
+		          		<p class="big">
+							Blood Banks
+						</p>
+			            </span>
 			        </a>
-			        </div>
-					<!-- <div class="col"> 
-					<span class="icon icon-xl icon-grayscale-darken  ion-speakerphone">
-			            <p class="big">
-							pharmacy
-						</p>
-			        </span>
-			        </div> -->
+		          	</div>
 				</div>
+				
 			</div>
 		</div>
 
