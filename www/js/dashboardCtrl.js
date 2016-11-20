@@ -25,6 +25,12 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, lifeLineService, 
         {'id': 8, 'label': 'AB -'},
     ];
 
+    if(localStorage.userDetails.length > 0){
+        var userCollection = JSON.parse(localStorage.userDetails);
+        console.log(userCollection);
+        $scope.user = userCollection;
+    }
+
     $scope.btnSave = function (userInfo) {
         localStorage.setItem("userDetails", JSON.stringify(userInfo));
         console.log(userInfo);
