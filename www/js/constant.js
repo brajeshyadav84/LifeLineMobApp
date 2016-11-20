@@ -15,7 +15,9 @@ URLS = {
 	getCountryDetails : "http://api.geonames.org/childrenJSON?geonameId=1269750&username=sinnitesh",
 	getCityDetails: "http://api.geonames.org/childrenJSON?geonameId=",
 	getBloodBankDetails: "http://data.gov.in/api/datastore/resource.json",
-	getHospitalityDetails: "https://maps.googleapis.com/maps/api/place/textsearch/json?key="+googleAPI.apiKey
+	getHospitalityDetails: "https://maps.googleapis.com/maps/api/place/textsearch/json?key="+googleAPI.apiKey,
+
+	forceUpgrade: "http://www.interviewgully.com/API/IG_Video/IGUpgrade.json"
 }
 
 

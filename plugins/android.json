@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-shake": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-sms-plugin": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        }
+    }
+}

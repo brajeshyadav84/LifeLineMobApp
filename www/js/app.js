@@ -71,11 +71,11 @@ LifeLine.config(function($stateProvider, $urlRouterProvider) {
   })
 
   .state('app.helpme', {
-      url: '/helpme',
+      url: '/helpme/:helpForShake',
       views: {
         'menuContent' :{
           templateUrl: "templates/HelpMe.html",
-          controller: 'dashboardCtrl'
+          controller: 'helpCtrl'
         }
       }
   })    
