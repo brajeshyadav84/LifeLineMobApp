@@ -1,6 +1,6 @@
 //angular.module('starter.controllers', [])
 
-LifeLine.controller('dashboardCtrl', function ($scope, $state, lifeLineService) {
+LifeLine.controller('dashboardCtrl', function ($scope, $state, lifeLineService, $ionicPopup) {
     localStorage.setItem("isFirstTime", true);
 
     $scope.onClickHospitality = function (Type) {
