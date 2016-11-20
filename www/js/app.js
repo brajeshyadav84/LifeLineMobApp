@@ -99,7 +99,8 @@ LifeLine.config(function($stateProvider, $urlRouterProvider) {
         }) 
   .state('tour', {
       url: '/tour',
-      templateUrl: "templates/Tour/Welcome.html"
+      templateUrl: "templates/Tour/Welcome.html",
+      controller: 'tourCtrl'
   });
 
   
