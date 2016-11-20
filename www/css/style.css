@@ -103,6 +103,12 @@ color: #e74c3c;
     text-align: center;
 }
 
+.inputCSS {
+    background-color: #ebebe5 !important;
+    width: 95% !important;
+    padding-left: 10px !important;
+}
+
 
 /*nav-bar-title:parent { left: 30px !important;  }*/
 /**/

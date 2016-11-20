@@ -60,6 +60,16 @@ LifeLine.config(function($stateProvider, $urlRouterProvider) {
       }
   })
 
+  .state('app.feedbackt', {
+      url: '/feedback',
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/Feedback.html",
+          controller: 'dashboardCtrl'
+        }
+      }
+  })
+
   .state('app.helpme', {
       url: '/helpme',
       views: {
