@@ -9,6 +9,10 @@ LifeLine.controller('helpCtrl', function ($scope, $state, lifeLineService, $stat
 		}
 	}
 
+	$scope.shakeHandler = function() {
+		onShake();
+	};
+
 	var onShake = function () {
 	  // Fired when a shake is detected
 	  alert("hello shake me");
