@@ -90,5 +90,19 @@
 color: #e74c3c;
 }
 
+.bottomButton
+{
+    height: 40px;
+    width: 100%;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    font-size: 23px;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+}
+
+
 /*nav-bar-title:parent { left: 30px !important;  }*/
 /**/

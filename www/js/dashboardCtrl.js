@@ -6,4 +6,10 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state) {
     $scope.onClickHospitality = function (Type) {
         $state.go("app.Hospitality", {"hospitalityType": Type});
     };
+
+
+    /// Start :: Manage Contact
+    
+    /// End :: Manage Contact
+
 })
