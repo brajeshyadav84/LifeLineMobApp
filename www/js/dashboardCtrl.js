@@ -27,7 +27,7 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, lifeLineService) 
 
     $scope.btnSave = function (userInfo) {
         console.log(userInfo);
-    }
+    };
 
     /// End :: Manage Contact
 
