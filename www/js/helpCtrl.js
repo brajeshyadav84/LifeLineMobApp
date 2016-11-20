@@ -3,10 +3,11 @@ LifeLine.controller('helpCtrl', function ($scope, $state, lifeLineService, $stat
 	$scope.helpForShake = $stateParams.helpForShake;
 
 	console.log($scope.helpForShake);
-
-	//if($scope.helpForShake){
-		//shake.startWatch(onShake, 25 /*, onError */);
-	//}
+	if(window.shake) {
+		if($scope.helpForShake){
+			shake.startWatch(onShake, 25 /*, onError */);
+		}
+	}
 
 	var onShake = function () {
 	  // Fired when a shake is detected
