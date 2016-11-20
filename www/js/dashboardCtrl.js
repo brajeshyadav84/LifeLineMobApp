@@ -26,7 +26,10 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, lifeLineService, 
     ];
 
     $scope.btnSave = function (userInfo) {
+        localStorage.setItem("userDetails", JSON.stringify(userInfo));
         console.log(userInfo);
+        console.log(localStorage.userDetails);
+        
     };
 
     /// End :: Manage Contact
