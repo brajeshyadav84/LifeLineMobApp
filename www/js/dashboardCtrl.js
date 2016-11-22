@@ -40,6 +40,26 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, lifeLineService, 
 
     /// End :: Manage Contact
 
+    /// Start :: Emergency Contact
+
+    var EmergencyRequest = {
+    };
+
+    var emergencyURL = URLS.emergencyURL;
+    lifeLineService.postExternalUrl(EmergencyRequest, emergencyURL).then( function(response){
+        var data = response.data;
+        $scope.emergencyList = data;
+        console.log("data emergency");console.log(data);
+    },function(error){
+        console.log(error);
+    });
+
+    $scope.onClickEmergency = function () {
+        $state.go("app.emergency");
+    };
+
+    /// End :: Emergency Contact
+
     /// Start :: Feedback
 
     /// End :: Feedback

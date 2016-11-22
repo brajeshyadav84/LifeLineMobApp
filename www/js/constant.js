@@ -17,7 +17,8 @@ URLS = {
 	getBloodBankDetails: "http://data.gov.in/api/datastore/resource.json",
 	getHospitalityDetails: "https://maps.googleapis.com/maps/api/place/textsearch/json?key="+googleAPI.apiKey,
 
-	forceUpgrade: "http://www.interviewgully.com/API/IG_Video/IGUpgrade.json"
+	forceUpgrade: "http://www.interviewgully.com/API/LifeLine/LLUpgrade.json",
+	emergencyURL: "http://www.interviewgully.com/API/LifeLine/Emergency.json"
 }
 
 

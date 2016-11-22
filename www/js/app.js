@@ -69,7 +69,15 @@ LifeLine.config(function($stateProvider, $urlRouterProvider) {
         }
       }
   })
-
+  .state('app.emergency', {
+      url: '/emergency',
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/Emergency.html",
+          controller: 'dashboardCtrl'
+        }
+      }
+  })
   .state('app.helpme', {
       url: '/helpme/:helpForShake',
       views: {
