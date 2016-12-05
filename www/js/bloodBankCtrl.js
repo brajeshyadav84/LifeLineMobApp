@@ -61,6 +61,7 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state,$ionicLoading , Bl
         //     }
         // });
     }
+
     $scope.updatebloodBanks = function (objSelected) {
 
         $scope.groups = [];
@@ -139,9 +140,6 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state,$ionicLoading , Bl
 
     }
 
-
-
-
     /*
      * if given group is the selected group, deselect it
      * else, select the given group
@@ -158,12 +156,18 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state,$ionicLoading , Bl
         return $scope.shownGroup === group;
     }
     $scope.showLoading = function() {
-    $ionicLoading.show({
-      template: 'Loading...',
-      duration: 3000
-    }).then(function(){
-       console.log("The loading indicator is now displayed");
-    });
-  };
+        $ionicLoading.show({
+          template: 'Loading...',
+          duration: 3000
+        }).then(function(){
+           console.log("The loading indicator is now displayed");
+        });
+    };
+
+    $scope.btnDoners = function () {
+        window.open("http://www.bloodbankindia.net/home/index#",'_system');
+    }
+
+
   
 })

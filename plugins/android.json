@@ -7,13 +7,22 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-x-socialsharing": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         },
         "cordova-plugin-shake": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         },
-        "cordova-sms-plugin": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         }
     },
