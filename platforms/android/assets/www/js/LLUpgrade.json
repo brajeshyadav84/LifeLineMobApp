@@ -1,0 +1,30 @@
+{
+	"iosSettings": {
+		"versions": ["2.0"],
+		"itunesurl": "http://www.google.com"
+	},
+	"androidSettings": {
+		"versions": ["2.0"],
+		"itunesurl": "http://www.google.com"
+	},
+	"routine_maintenance": {
+		"enable": "false",
+		"en": {
+			"title": "Maintenance Message",
+			"message": "InterviewGully app will not be available on 6 Sept 2014, from 7:45 PM to 10:45 PM, and 7 Sept 2014, from 11:45 AM to 3:45 PM. We are upgrading to give you a better app performance. We apologise for any inconvenience caused."
+		}
+	},
+	"blocked_maintenance": {
+		"enable": "false",
+		"en": {
+			"title": "System Check In Progress",
+			"message": "InterviewGully app will not be available on 12 Oct 2014, from 2:00 AM to 4:00 AM. We are upgrading to give you a better app performance. We apologise for any inconvenience caused."
+		},
+		"th": {
+			"title": "",
+			"message": ""
+		}
+	},
+	"dispatchPeriod": "10",
+	"enableAnalytics": "YES"
+}

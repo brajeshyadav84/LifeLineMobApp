@@ -1,0 +1,31 @@
+<ion-view>
+    <ion-nav-title>
+        <div class="rd-navbar-brand">
+            <a href="#/app/dashboard" class="brand-name primary-color">
+                <!-- <span class="icon icon-md icon-primary"><i class="icon ion-ios-home"></i></span> -->
+                <h1><span> Emergency Helpline </span></h1>
+            </a>
+        </div>
+    </ion-nav-title>
+    <ion-nav-back-button class="button-clear go-back">
+    </ion-nav-back-button>
+    <ion-content class="has-header">
+        <ion-list>
+            <div>
+                <div ng-repeat="item in emergencyList">
+                    <div class="card">
+                            <div class="item item-divider">
+                                <div>
+                                   <div><a href="tel:{{item.helpline}}"><i class="icon ion-ios-telephone custom-ios-telephone" style="font-size: 16px;padding-right: 6px;"></i> {{item.helpline}} </a>
+                                   </div>
+                                   <div> <a ><i class="icon ion-android-textsms custom-android-textsms" style="font-size: 16px;"> {{item.description}} </i></a>
+                                   </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+        </ion-list>
+    </ion-content>
+</ion-view>

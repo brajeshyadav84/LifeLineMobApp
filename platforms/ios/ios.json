@@ -1,0 +1,223 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Sms\"><param name=\"ios-package\" value=\"Sms\" /></feature>",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CDVShake\"><param name=\"ios-package\" value=\"CDVShake\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FCMPlugin\"><param name=\"ios-package\" value=\"FCMPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "UIBackgroundModes": [
+                        {
+                            "xml": "<array><string>remote-notification</string></array>",
+                            "count": 1
+                        }
+                    ],
+                    "GCM_SENDER_ID": [
+                        {
+                            "xml": "<string>335176001289</string>",
+                            "count": 1
+                        }
+                    ],
+                    "IS_GCM_ENABLED": [
+                        {
+                            "xml": "<true />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Debug.plist": {
+                "parents": {
+                    "aps-environment": [
+                        {
+                            "xml": "<string>development</string>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Release.plist": {
+                "parents": {
+                    "aps-environment": [
+                        {
+                            "xml": "<string>production</string>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-sms-plugin": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-shake": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "335176001289",
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-fcm": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-velda-devicefeedback": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-sms-plugin.Sms",
+            "file": "plugins/cordova-sms-plugin/www/sms.js",
+            "pluginId": "cordova-sms-plugin",
+            "clobbers": [
+                "window.sms"
+            ]
+        },
+        {
+            "id": "cordova-plugin-x-socialsharing.SocialSharing",
+            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+            "pluginId": "cordova-plugin-x-socialsharing",
+            "clobbers": [
+                "window.plugins.socialsharing"
+            ]
+        },
+        {
+            "id": "cordova-plugin-inappbrowser.inappbrowser",
+            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+            "pluginId": "cordova-plugin-inappbrowser",
+            "clobbers": [
+                "cordova.InAppBrowser.open",
+                "window.open"
+            ]
+        },
+        {
+            "id": "cordova-plugin-device-motion.Acceleration",
+            "file": "plugins/cordova-plugin-device-motion/www/Acceleration.js",
+            "pluginId": "cordova-plugin-device-motion",
+            "clobbers": [
+                "Acceleration"
+            ]
+        },
+        {
+            "id": "cordova-plugin-device-motion.accelerometer",
+            "file": "plugins/cordova-plugin-device-motion/www/accelerometer.js",
+            "pluginId": "cordova-plugin-device-motion",
+            "clobbers": [
+                "navigator.accelerometer"
+            ]
+        },
+        {
+            "id": "cordova-plugin-shake.Shake",
+            "file": "plugins/cordova-plugin-shake/www/shake.js",
+            "pluginId": "cordova-plugin-shake",
+            "clobbers": [
+                "shake"
+            ]
+        },
+        {
+            "id": "phonegap-plugin-push.PushNotification",
+            "file": "plugins/phonegap-plugin-push/www/push.js",
+            "pluginId": "phonegap-plugin-push",
+            "clobbers": [
+                "PushNotification"
+            ]
+        },
+        {
+            "id": "cordova-plugin-fcm.FCMPlugin",
+            "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+            "pluginId": "cordova-plugin-fcm",
+            "clobbers": [
+                "FCMPlugin"
+            ]
+        },
+        {
+            "id": "cordova-plugin-velda-devicefeedback.DeviceFeedback",
+            "file": "plugins/cordova-plugin-velda-devicefeedback/DeviceFeedback.js",
+            "pluginId": "cordova-plugin-velda-devicefeedback",
+            "clobbers": [
+                "window.plugins.deviceFeedback"
+            ]
+        },
+        {
+            "id": "cordova-plugin-console.console",
+            "file": "plugins/cordova-plugin-console/www/console-via-logger.js",
+            "pluginId": "cordova-plugin-console",
+            "clobbers": [
+                "console"
+            ]
+        },
+        {
+            "id": "cordova-plugin-console.logger",
+            "file": "plugins/cordova-plugin-console/www/logger.js",
+            "pluginId": "cordova-plugin-console",
+            "clobbers": [
+                "cordova.logger"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-sms-plugin": "0.1.11",
+        "cordova-plugin-x-socialsharing": "5.1.3",
+        "cordova-plugin-inappbrowser": "1.5.0",
+        "cordova-plugin-device-motion": "1.2.2",
+        "cordova-plugin-shake": "0.5.4",
+        "phonegap-plugin-push": "1.9.0",
+        "cordova-plugin-fcm": "1.1.5",
+        "cordova-plugin-velda-devicefeedback": "0.0.2",
+        "cordova-plugin-console": "1.0.4"
+    }
+}

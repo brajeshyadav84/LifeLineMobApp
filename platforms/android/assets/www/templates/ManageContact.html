@@ -1,0 +1,63 @@
+<ion-view view-title="Manage Information">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+
+       		<div style="height:90%;overflow-y: scroll;overflow-x: hidden;">
+			<div class="list">
+				<h4 style="padding-left: 15px;">Personal Information</h4>
+				<label class="item item-input item-stacked-label">
+			    <div class="input-customlabel"> Name</div>
+			    <input type="text" placeholder="John" class="inputCSS" ng-model="user.name">
+			    </label>
+				<label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Mobile</div>
+			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.mobile">
+			    </label>
+				<label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Email</div>
+			    <input type="text" placeholder="john@xxx.com" class="inputCSS" ng-model="user.email">
+			    </label>
+				<label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Blood Group(Optional)</div>
+			     	<select class="tour-Select" ng-model="user.bloodGroup" ng-options="opt as opt.label for opt in bloodGroupList ">
+			     	</select>
+			    </label>
+			</div>
+
+			<div class="list">
+				<h4 style="padding-left: 15px;">Emergency Contact Information</h4>
+				<label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Contact 1:</div>
+			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact1">
+			    </label>
+			    <label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Contact 2:</div>
+			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact2">
+			    </label>
+			    <label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Contact 3:</div>
+			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact3">
+			    </label>
+			    <label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Contact 4:</div>
+			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact4">
+			    </label>
+			    <label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Contact 5:</div>
+			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact5">
+			    </label>
+			</div>
+			</div>
+			<div>
+			<a ng-Click="btnSave(user)">
+				<div class="bottomButton">
+					Save
+				</div>
+		    </a>
+		    </div>
+    
+  </ion-content>
+  
+</ion-view>

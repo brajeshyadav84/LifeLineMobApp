@@ -1,0 +1,50 @@
+<ion-view view-title="Welcome to LifeLine App" id="tour-view">
+
+	<ion-slide-box show-pager="true">
+		<ion-slide>
+			<div><img style="height: 250px;width: 250px;" src="../../img/tour/tour-bb.png"/></div>
+			<h3>Find nearest blood bank based on states and cities</h3>
+		</ion-slide>
+		<ion-slide>
+			<div><img style="height: 250px;width: 250px;" src="../../img/tour/tour-emergency.png"/></div>
+			<h3>Find emergency contact details</h3>
+		</ion-slide>
+		<ion-slide>
+			<div><img style="height: 250px;width: 250px;" src="../../img/tour/tour-medical.png"/></div>
+			<h3>Find Hospitals and Doctors</h3>
+		</ion-slide>
+		<ion-slide>
+			<div><img style="height: 250px;width: 250px;" src="../../img/tour/tour-helpme.png"/></div>
+			<h3>Shake and share your details to someone for your help, when you are in trouble</h3>
+		</ion-slide>
+
+		<ion-slide>
+			<span class="icon icon-slide"></span>
+			<h4>Personal Information</h4>
+			<div class="list">
+				<label class="item item-input item-stacked-label">
+			    <div class="input-customlabel"> Name</div>
+			    <input type="text" placeholder="John" class="inputCSS" ng-model="user.name">
+			    </label>
+				<label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Mobile</div>
+			    <input type="text" placeholder="1234567890" class="inputCSS"  ng-model="user.mobile">
+			    </label>
+				<label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Email</div>
+			    <input type="text" placeholder="john@xxx.com" class="inputCSS"  ng-model="user.email">
+			    </label>
+				<label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">Blood Group(Optional)</div>
+			     	<select class="tour-Select" ng-model="user.bloodGroup" ng-options="opt as opt.label for opt in bloodGroupList ">
+			     	</select>
+			    </label>
+				<a ng-Click="btnSubmit(user)">
+					<div class="tour-submit">
+						Submit
+					</div>
+				</a>
+			</div>
+		</ion-slide>
+	</ion-slide-box>
+</ion-view>

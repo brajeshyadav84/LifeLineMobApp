@@ -24,6 +24,18 @@
         },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-sms-plugin": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         }
     },
     "dependent_plugins": {

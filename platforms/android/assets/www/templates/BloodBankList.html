@@ -1,0 +1,78 @@
+<ion-view>
+    <ion-nav-title>
+        <div class="rd-navbar-brand">
+            <a href="#/app/dashboard" class="brand-name primary-color">
+                <!-- <span class="icon icon-md icon-primary"><i class="icon ion-ios-home"></i></span> -->
+                <h1><span>Blood</span><span class="text-primary">Banks</span></h1>
+            </a>
+        </div>
+    </ion-nav-title>
+    <ion-nav-back-button class="button-clear go-back">
+    </ion-nav-back-button>
+    <ion-content class="has-header">
+        
+        <ion-list>
+            <label class="item item-input item-select item-assertive">
+                <div class="input-label">
+                    Select State
+                </div>
+
+                <select id="StateID" name="geonameId" ng-model="item.SelectedOption.ID" ng-change="updateCities(item.SelectedOption)" ng-options="item as item.name for item in countries|orderBy:'name'">
+                    <option value="" selected>Select the state</option>
+                    <!--<option ng-repeat="country in countries" value="{{country.id}}">{{country.name}}</option>-->               
+                </select>
+            </label>
+            <label class="item item-input item-select item-assertive">
+                <div class="input-label">
+                    Select City
+                </div>
+
+                <select id="cityID" name="cityId" ng-model="cities.SelectedOption.ID" ng-change="updatebloodBanks(cities.SelectedOption)" ng-options="city as city.name for city in cities|orderBy:'name'">
+                    <option value="" selected>Select the city</option>
+                    <!--<option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>-->
+                </select>
+            </label>
+            <div ng-model="group.city" ng-repeat="group in groups">
+                <ion-item class="item-stable  item-icon-right"
+                          ng-click="toggleGroup(group)"
+                          ng-class="{active: isGroupShown(group)}">
+                    <i class="icon" ng-class="isGroupShown(group) ? 'ion-chevron-down custom-chevron-down' : 'ion-chevron-right'"></i>
+                    &nbsp;
+                   {{group.h_name}}
+                </ion-item>
+                <ion-item class="item-accordion"
+                          ng-repeat="item in group.items"
+                          ng-show="isGroupShown(group)">
+                    <div class="card">
+                        <div class="item item-text-wrap" style="font-family:Verdana,sans-serif">
+                            <strong>Name:</strong> {{item.h_name}}<br/>
+                            <strong>Address:</strong> {{item.district}},{{item.address}} <br />
+                            <strong>Postal:</strong> {{item.pincode}}<br />
+                            <strong>Service Time:</strong> {{item.service_time}} 
+                        </div>
+                        <div class="item item-divider">
+                            <div style="display: flex;justify-content: space-between;">
+                               <div><a href="tel:NA"><i class="icon item-icon-right ion-ios-telephone custom-ios-telephone" style="font-size: 16px;"> {{item.contact}}</i></a>
+                               </div>
+                               <div> <a href="mailto:NA" class=""><i class="icon item-icon-right ion-android-textsms custom-android-textsms" style="font-size: 16px;"> Share</i></a>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="accordionleftDiV">{{item.address}}</div>
+                    <div class="accordionrightDiV">
+                        <i class="icon item-icon-right ion-ios-telephone custom-ios-telephone"></i>
+                        <i class="icon item-icon-right ion-android-textsms custom-android-textsms"></i>
+
+                    </div>-->
+                    
+                </ion-item>
+            </div>
+        </ion-list>
+
+        <div class="bottomCircle" ng-Click="btnDoners()">
+            Blood Doner's 
+        </div>
+
+    </ion-content>
+</ion-view>

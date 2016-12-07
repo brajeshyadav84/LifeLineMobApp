@@ -1,0 +1,31 @@
+#tour-view .slider {
+height: 100%;
+}
+#tour-view .slider-slide {
+padding-top: 100px;
+text-align: center;
+}
+#tour-view .icon-slide {
+font-size: 20em;
+display: inline-block;
+}
+.input-customlabel
+{
+    text-align: left
+}
+.tour-Select{
+        float: left;
+    width: 98%;
+    height: 40px;
+}
+.tour-submit
+{
+    height: 40px;
+    width: 100%;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    font-size: 23px;
+    position: fixed;
+    bottom: 60px;
+}

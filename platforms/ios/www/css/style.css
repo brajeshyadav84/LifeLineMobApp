@@ -1,0 +1,119 @@
+/* Empty. Add your own CSS if you like */
+/*::-webkit-scrollbar { 
+    display: none; 
+}
+*/
+
+.landing_bg{
+	/*background-color: #aa1d1d;*/
+	background-color: #f8796c;    
+	color: white;
+}
+
+.lending-content{
+	display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 150px;
+    width: 100%;
+}
+
+.innner-div{
+	height: 100px;
+    width: 95px;
+    border-radius: 25px;
+    background-color: white;
+    color: red;
+}
+
+.scroll{
+	height: 100%;
+}
+
+.icon-xl {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 45px;
+}
+.icon-grayscale-darken {
+    color: #060a76;
+    background: #fff;
+}
+.icon {
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+}
+.big {
+    font-size: 0.3em;
+    line-height: 1;
+    padding-top: 10px;
+    color: white;
+}
+/*Added for NavBar Icon*/
+ .rd-navbar-brand {
+    position: relative;
+    display: inline-block;
+    padding-left: 4px;
+    width: calc(100% - 104px);
+    -webkit-transform-origin: 0 7%;
+    transform-origin: 0 7%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.45);
+}
+.rd-navbar-brand a.brand-name * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.rd-navbar-brand a.brand-name h1 {
+    position: relative;
+    top: 13px;
+    /*left: 17px;*/
+    font-size: 40px;
+    line-height: 1;
+    color: #3e454c;
+}
+.icon-primary {
+    color: #fff;
+    background: #e74c3c;
+}
+.icon-md {
+    width: 85px;
+    height: 85px;
+    line-height: 56px;
+    font-size: 56px;
+}
+.icon {
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.text-primary
+{
+color: #e74c3c;
+}
+
+.bottomButton
+{
+    height: 40px;
+    width: 100%;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    font-size: 23px;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+}
+
+.inputCSS {
+    background-color: #ebebe5 !important;
+    width: 95% !important;
+    padding-left: 10px !important;
+}
+
+
+/*nav-bar-title:parent { left: 30px !important;  }*/
+/**/
