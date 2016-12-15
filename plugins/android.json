@@ -36,6 +36,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         }
     },
     "dependent_plugins": {

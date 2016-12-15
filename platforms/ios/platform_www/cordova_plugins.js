@@ -88,6 +88,23 @@ module.exports = [
         "clobbers": [
             "cordova.logger"
         ]
+    },
+    {
+        "id": "cordova-plugin-network-information.network",
+        "file": "plugins/cordova-plugin-network-information/www/network.js",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "id": "cordova-plugin-network-information.Connection",
+        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "Connection"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -101,7 +118,8 @@ module.exports.metadata =
     "phonegap-plugin-push": "1.9.0",
     "cordova-plugin-fcm": "1.1.5",
     "cordova-plugin-velda-devicefeedback": "0.0.2",
-    "cordova-plugin-console": "1.0.4"
+    "cordova-plugin-console": "1.0.4",
+    "cordova-plugin-network-information": "1.3.1"
 };
 // BOTTOM OF METADATA
 });
