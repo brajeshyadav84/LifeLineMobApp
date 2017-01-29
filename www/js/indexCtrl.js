@@ -1,6 +1,6 @@
 //angular.module('starter.controllers', [])
 
-LifeLine.controller('indexCtrl', function ($scope, $state, $stateParams ) { //$cordovaSocialSharing, $ionicPopup
+LifeLine.controller('indexCtrl', function ($scope, $state, $stateParams, $cordovaSocialSharing ) { //$cordovaSocialSharing, $ionicPopup
     if (!!localStorage.isFirstTime) {
         $state.go("app.dashboard");
     } else {
@@ -20,7 +20,7 @@ LifeLine.controller('indexCtrl', function ($scope, $state, $stateParams ) { //$c
 	}
 
 	$scope.shareMe = function() {
-        //$cordovaSocialSharing.share('LifeLine!, Aim to help you', 'LifeLine', null, 'http://www.interviewgully.com/API/appLauncher.html');
+        $cordovaSocialSharing.share('LifeLine!, aim to help you', 'LifeLine', null, 'http://www.interviewgully.com/API/appLauncher.html');
     };
 
 })

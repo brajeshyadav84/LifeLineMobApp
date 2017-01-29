@@ -1,6 +1,6 @@
 //angular.module('starter.controllers', [])
 
-LifeLine.controller('bloodBankCtrl', function ($scope, $state,$ionicLoading , BloodBankPage, loadLocaljson, lifeLineService) { // $cordovaSocialSharing, $ionicPopup
+LifeLine.controller('bloodBankCtrl', function ($scope, $state,$ionicLoading , BloodBankPage, loadLocaljson, lifeLineService, $cordovaSocialSharing ) { // $cordovaSocialSharing, $ionicPopup
     $scope.groups = [];
     $scope.countries = [];
     $scope.cities = [];
@@ -173,7 +173,7 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state,$ionicLoading , Bl
         var contact = data.contact != "NA" ? "Contact -: "+data.contact : "";
         var result = data.h_name + address + contact;
         console.log(result);
-        //$cordovaSocialSharing.share('LifeLine!, Aim to help you', 'LifeLine', null, 'http://www.interviewgully.com/API/appLauncher.html');
+        $cordovaSocialSharing.share('LifeLine!, Aim to help you', 'LifeLine', null, 'http://www.interviewgully.com/API/appLauncher.html');
     };
 
 
