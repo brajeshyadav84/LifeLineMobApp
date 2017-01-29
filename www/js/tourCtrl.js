@@ -1,4 +1,4 @@
-LifeLine.controller('tourCtrl', function ($scope, $state, lifeLineService, $stateParams) {
+LifeLine.controller('tourCtrl', function ($scope, $state, lifeLineService, $stateParams, loadLocaljson, lifeLineService) {
 
 	$scope.bloodGroupList = [
 		{'id': 1, 'label': '0 +'},
@@ -16,6 +16,41 @@ LifeLine.controller('tourCtrl', function ($scope, $state, lifeLineService, $stat
 	$scope.btnSubmit = function (userInfo) {
 		console.log(userInfo);
 		$state.go("app.dashboard");
-	}
+	};
+
+    $scope.groups = [];
+    $scope.countries = [];
+    $scope.cities = [];
+    $scope.selectedstate = '';
+
+    loadLocaljson.get().then(function (response) {
+        //console.log(response.data);        
+        $scope.selectedstate = '';
+        for (var i = 0; i < response.data.length; i++) {
+            $scope.countries[i] = {
+                name: response.data[i].state,
+                id: response.data[i].id,
+                city: response.data[i].cityname
+            };
+        }
+    }, function (error) {
+        console.log(error);
+    });
+
+    $scope.updateCities = function (city_id) {
+        console.log(city_id);
+         $scope.cities=[];
+        if (city_id.ID != "" && city_id.ID != null) {
+            $scope.selectedstate = city_id.ID.name;
+            for (var i = 0; i < city_id.ID.city.length; i++) {
+                $scope.cities[i] = {
+                    name: city_id.ID.city[i],
+                    id: i+1
+                };
+            }
+        }
+          console.log($scope.cities);
+    };
+
 
 })

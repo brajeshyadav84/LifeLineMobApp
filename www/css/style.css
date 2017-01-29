@@ -176,5 +176,13 @@ padding-top: 50px;
     margin-top: 44px;
 }
 
+.selectCSS {
+    background-color: #ebebe5 !important;
+    width: 95% !important;
+    padding-left: 10px !important;
+    height: 34px;
+    float: left;
+}
+
 /*nav-bar-title:parent { left: 30px !important;  }*/
 /**/
