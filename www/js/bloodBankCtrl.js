@@ -173,7 +173,7 @@ LifeLine.controller('bloodBankCtrl', function ($scope, $state,$ionicLoading , Bl
         var contact = data.contact != "NA" ? "Contact -: "+data.contact : "";
         var result = data.h_name + address + contact;
         console.log(result);
-        $cordovaSocialSharing.share('LifeLine!, Aim to help you', 'LifeLine', null, 'http://www.interviewgully.com/API/appLauncher.html');
+        $cordovaSocialSharing.share(result, 'LifeLine', null, 'http://www.interviewgully.com/API/appLauncher.html');
     };
 
 
