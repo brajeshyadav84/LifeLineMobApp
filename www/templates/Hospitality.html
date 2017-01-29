@@ -9,10 +9,7 @@
     </ion-nav-title>
     <ion-nav-back-button class="button-clear go-back">
     </ion-nav-back-button>
-    <ion-content class="has-header">
-        
-        <ion-list>
-            <div>
+    <div class="dropdown-margin">
                 <label class="item item-input item-select item-assertive">
                     <div class="input-label">
                         Select State
@@ -34,7 +31,11 @@
                     </select>
                 </label>
             </div>
-            <div>
+    <ion-content class="has-header container-margin">
+        
+        <ion-list>
+            
+            
                 <div ng-model="group.city" ng-repeat="group in groups">
                     <ion-item class="item-stable  item-icon-right"
                               ng-click="toggleGroup(group)"
@@ -63,7 +64,7 @@
                         </div>
                     </ion-item>
                 </div>
-            </div>
+            
             
         </ion-list>
     </ion-content>
