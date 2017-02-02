@@ -1,6 +1,6 @@
 //angular.module('starter.controllers', [])
 
-LifeLine.controller('dashboardCtrl', function ($scope, $state, lifeLineService, $ionicPopup, loadLocaljson, lifeLineService) {
+LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, loadLocaljson, lifeLineService) {
     localStorage.setItem("isFirstTime", true);
 
     $scope.onClickHospitality = function (Type) {
@@ -125,8 +125,8 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, lifeLineService, 
     $scope.countries = [];
     $scope.cities = [];
     $scope.selectedstate = '';
-
-    loadLocaljson.get().then(function (response) {
+var jsonLocation=URLS.getLocalJsonforBlodBank;
+    loadLocaljson.get(jsonLocation).then(function (response) {
         //console.log(response.data);        
         $scope.selectedstate = '';
         for (var i = 0; i < response.data.length; i++) {

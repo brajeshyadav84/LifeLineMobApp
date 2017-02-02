@@ -25,21 +25,7 @@ LifeLine.factory('BloodBankPage', function ($http,$q, $ionicLoading) {
                 return error;
             });
         },
-        getbloodBanks: function (cityname, selectedstate) {
-            // var res_id = "e16c75b6-7ee6-4ade-8e1f-2cd3043ff4c9";
-            // var api_key = "9555f4b13e18327cb4a655f672c4fb37";
-            // var filterColumnName = "district";
-            // var filterColumnValue = id;
-            // var fields = "state,city,district,h_name,address,pincode,contact,helpline,email,service_time";
-            // var sortcolumnName = "district";
-            // var offset = "1";
-            // var no_elements = "100";
-            // var link = "http://data.gov.in/api/datastore/resource.json"
-            //     + "?resource_id=" + res_id
-            //     + "&api-key=" + api_key
-            //     + "&filters[" + filterColumnName + "]=" + filterColumnValue
-            //     + "&fields=" + fields
-            //     + "&sort[" + sortcolumnName + "]=asc"
+        getbloodBanks: function (cityname, selectedstate) {            
             var serviceUrl = URLS.getBloodBankDetails
                 + "?resource_id=" + bloodBankParam.res_id
                 + "&api-key=" + bloodBankParam.api_key
@@ -49,10 +35,26 @@ LifeLine.factory('BloodBankPage', function ($http,$q, $ionicLoading) {
                 + "&sort[" + bloodBankParam.sortcolumnName + "]=asc"
             console.log(serviceUrl);
             return $http.get(serviceUrl).success(function (response) {
-            
-            //.then(function (response) {
-               // BloodBanks = response;
-                //return BloodBanks;
+          
+                 $ionicLoading.hide();
+                deferred.resolve(response);
+            })
+             .error(function (error) {
+                $ionicLoading.hide();
+                deferred.reject(error);
+            });
+        },
+         gethospitals: function (cityname, selectedstate) {            
+            var serviceUrl = URLS.getHospitalityDetails
+                + "?resource_id=" + hospitalsParam.res_id
+                + "&api-key=" + hospitalsParam.api_key
+                + "&filters[" + hospitalsParam.filterColumnName + "]=" + window.encodeURIComponent(selectedstate)
+                + "&filters[" + hospitalsParam.filterColumnName1 + "]=" + window.encodeURIComponent(cityname)+",NA"
+                + "&fields=" + hospitalsParam.fields
+                + "&sort[" + hospitalsParam.sortcolumnName + "]=asc"
+            console.log(serviceUrl);
+            return $http.get(serviceUrl).success(function (response) {
+          
                  $ionicLoading.hide();
                 deferred.resolve(response);
             })
@@ -69,9 +71,10 @@ LifeLine.factory('loadLocaljson', function ($http, $q, $ionicLoading) {
     var deferred = $q.defer();
     $ionicLoading.show({ template: 'Loading...' });
     return {
-        get: function () {            //$http.get('js/cities.json'); // this will return a promise to controller
+        get: function (serviceUrl) {            //$http.get('js/cities.json'); // this will return a promise to controller
 
-            return $http.get('js/citylist.json').success(function (data) {
+           // return $http.get('js/citylist.json').success(function (data) {
+         return $http.get(serviceUrl).success(function (data) {
                 // then(function (data) {
                 mainInfo = data;
                 $ionicLoading.hide();

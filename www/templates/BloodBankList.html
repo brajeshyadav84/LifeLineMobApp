@@ -55,7 +55,7 @@
                         </div>
                         <div class="item item-divider">
                             <div style="display: flex;justify-content: space-between;">
-                               <div><a href="tel: {{item.contact}}"><i class="icon item-icon-right ion-ios-telephone custom-ios-telephone" style="font-size: 16px;"> {{item.contact}}</i></a>
+                               <div ng-repeat="con in item.contact"  ><a href="tel: {{con}}"><i class="icon item-icon-right ion-ios-telephone custom-ios-telephone" style="font-size: 16px;"> {{con}}</i></a>
                                </div>
                                <div ng-click="shareDetails(item)"> <a><i class="icon item-icon-right ion-android-textsms custom-android-textsms" style="font-size: 16px;"> Share</i></a>
                                </div>
