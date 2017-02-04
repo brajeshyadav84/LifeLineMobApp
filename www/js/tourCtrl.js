@@ -22,8 +22,8 @@ LifeLine.controller('tourCtrl', function ($scope, $state, lifeLineService, $stat
     $scope.countries = [];
     $scope.cities = [];
     $scope.selectedstate = '';
-
-    loadLocaljson.get().then(function (response) {
+var jsonLocation=URLS.getLocalJsonforBlodBank;
+    loadLocaljson.get(jsonLocation).then(function (response) {
         //console.log(response.data);        
         $scope.selectedstate = '';
         for (var i = 0; i < response.data.length; i++) {
