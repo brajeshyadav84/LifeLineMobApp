@@ -1,6 +1,6 @@
 //angular.module('starter.controllers', [])
 
-LifeLine.controller('dashboardCtrl', function ($scope, $state, lifeLineService, $ionicPopup) {
+LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, loadLocaljson, lifeLineService) {
     localStorage.setItem("isFirstTime", true);
 
     $scope.onClickHospitality = function (Type) {
@@ -120,5 +120,40 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, lifeLineService, 
      };
 
     /// end force upgrade Implememntation
+
+    $scope.groups = [];
+    $scope.countries = [];
+    $scope.cities = [];
+    $scope.selectedstate = '';
+var jsonLocation=URLS.getLocalJsonforBlodBank;
+    loadLocaljson.get(jsonLocation).then(function (response) {
+        //console.log(response.data);        
+        $scope.selectedstate = '';
+        for (var i = 0; i < response.data.length; i++) {
+            $scope.countries[i] = {
+                name: response.data[i].state,
+                id: response.data[i].id,
+                city: response.data[i].cityname
+            };
+        }
+    }, function (error) {
+        console.log(error);
+    });
+
+    $scope.updateCities = function (city_id) {
+        console.log(city_id);
+         $scope.cities=[];
+        if (city_id.ID != "" && city_id.ID != null) {
+            $scope.selectedstate = city_id.ID.name;
+            for (var i = 0; i < city_id.ID.city.length; i++) {
+                $scope.cities[i] = {
+                    name: city_id.ID.city[i],
+                    id: i+1
+                };
+            }
+        }
+          console.log($scope.cities);
+    }
+
 
 })

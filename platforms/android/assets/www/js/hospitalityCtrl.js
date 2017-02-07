@@ -7,8 +7,8 @@ LifeLine.controller('hospitalityCtrl', function ($scope, $state, $stateParams, $
     $scope.countries = [];
     $scope.cities = [];
     $scope.selectedstate = '';
-
-    loadLocaljson.get().then(function (response) {
+var jsonLocation=URLS.getLocalJsonforHospitals;
+    loadLocaljson.get(jsonLocation).then(function (response) {
         //console.log(response.data);        
         $scope.selectedstate = '';
         for (var i = 0; i < response.data.length; i++) {
@@ -64,14 +64,47 @@ LifeLine.controller('hospitalityCtrl', function ($scope, $state, $stateParams, $
         var request = {};
         $scope.showLoading();
         
-        var request = {};
-	    var serviceUrl = URLS.getHospitalityDetails + '&query='+$scope.hospitalityType+'in'+ objSelected.ID.name;
-	    lifeLineService.postExternalUrl(request, serviceUrl).then(function (response) {
-	        console.log("response");console.log(response.data.results);
-	        $scope.groups = response.data.results;
-	    }, function (error) {
-	        console.log(error);
-	    });
+    if (objSelected.ID != null && objSelected.ID != "") {
+            console.log(objSelected);            
+            BloodBankPage.gethospitals(objSelected.ID.name,$scope.selectedstate).then(function (response) {
+                console.log(response.data);
+                if (response.data.success) {
+                    for (var i = 0; i < response.data.count; i++) {
+
+                        $scope.groups[i] = {
+                            state: response.data.records[i].state,
+                            city: response.data.records[i].district,
+                            h_name: response.data.records[i].Hospital_Name,
+                            items: []
+                        };
+                        $scope.groups[i].items.push({
+                            district: response.data.records[i].district,
+                            h_name: response.data.records[i].Hospital_Name,
+                            address: response.data.records[i].Location,
+                            contact: response.data.records[i].Mobile_Number,
+                            helpline: response.data.records[i].Helpline,
+                            pincode: response.data.records[i].Pincode,
+                            email: response.data.records[i].Hospital_Primary_Email_Id,
+                            //service_time: response.data.records[i].service_time,
+                        }
+                        );
+
+                    }
+                }
+                //$scope.groups.sort();
+                //console.log($scope.groups.length);
+
+            });
+        }
+
+
+	    //var serviceUrl = URLS.getHospitalityDetails + '&query='+$scope.hospitalityType+'in'+ objSelected.ID.name;
+	    // lifeLineService.postExternalUrl(request, serviceUrl).then(function (response) {
+	    //     console.log("response");console.log(response.data.results);
+	    //     $scope.groups = response.data.results;
+	    // }, function (error) {
+	    //     console.log(error);
+	    // });
 	        
     }
 });

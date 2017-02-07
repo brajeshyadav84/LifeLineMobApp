@@ -38,6 +38,8 @@
 		0E8C6DF36A1B41E7948D5453 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8587FB69FA134824905E6292 /* CDVReachability.m */; };
 		6F0B5C8A23BB4A3FB1E33B65 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00C65638D504663B1C329F4 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C0811D40CB0A4606805BB3B4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0012B06F954343FFBC09C792 /* CoreTelephony.framework */; };
+		56BC28DF7A474E56BDB1BF2C /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13391AB4C1B4A6D92871A4D /* GoogleMobileAds.framework */; };
+		1C98041DF45A4E7B9C0329D8 /* CDVAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = 38797FAA626742FE9FFEFBEB /* CDVAdMob.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,9 @@
 		97583F79AC8B49E39CA3090D /* CDVReachability.h */ = {isa = PBXFileReference; name = "CDVReachability.h"; path = "cordova-plugin-network-information/CDVReachability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		D00C65638D504663B1C329F4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		0012B06F954343FFBC09C792 /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		A13391AB4C1B4A6D92871A4D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; name = "GoogleMobileAds.framework"; path = "LifeLineApp/Plugins/cordova-admobsdk/GoogleMobileAds.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		38797FAA626742FE9FFEFBEB /* CDVAdMob.m */ = {isa = PBXFileReference; name = "CDVAdMob.m"; path = "cordova-plugin-admob/CDVAdMob.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		EC7B95BE55A24336A5B02011 /* CDVAdMob.h */ = {isa = PBXFileReference; name = "CDVAdMob.h"; path = "cordova-plugin-admob/CDVAdMob.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +136,7 @@
 				AB1A2E15D8C5463BA87FF8C0 /* Security.framework in Frameworks */,
 				6F0B5C8A23BB4A3FB1E33B65 /* SystemConfiguration.framework in Frameworks */,
 				C0811D40CB0A4606805BB3B4 /* CoreTelephony.framework in Frameworks */,
+				56BC28DF7A474E56BDB1BF2C /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +222,7 @@
 				14FB942F718345F88AA02A50 /* Security.framework */,
 				D00C65638D504663B1C329F4 /* SystemConfiguration.framework */,
 				0012B06F954343FFBC09C792 /* CoreTelephony.framework */,
+				A13391AB4C1B4A6D92871A4D /* GoogleMobileAds.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,6 +263,8 @@
 				8587FB69FA134824905E6292 /* CDVReachability.m */,
 				9E3736FE5FD94289B3B178AC /* CDVConnection.h */,
 				97583F79AC8B49E39CA3090D /* CDVReachability.h */,
+				38797FAA626742FE9FFEFBEB /* CDVAdMob.m */,
+				EC7B95BE55A24336A5B02011 /* CDVAdMob.h */,
 			);
 			name = Plugins;
 			path = "LifeLineApp/Plugins";
@@ -375,6 +384,7 @@
 				ABCAB73311184BF6B6A8AB27 /* CDVLogger.m in Sources */,
 				AACA8C7B1A3B4D58BFCD6619 /* CDVConnection.m in Sources */,
 				0E8C6DF36A1B41E7948D5453 /* CDVReachability.m in Sources */,
+				1C98041DF45A4E7B9C0329D8 /* CDVAdMob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +427,7 @@
 					"\"LifeLineApp/Plugins/cordova-plugin-fcm\"",
 					"\"LifeLineApp/Plugins/cordova-plugin-fcm\"",
 					"\"LifeLineApp/Plugins/cordova-plugin-fcm\"",
+					"\"LifeLineApp/Plugins/cordova-admobsdk\"",
 				);
 			};
 			name = Debug;
@@ -447,6 +458,7 @@
 					"\"LifeLineApp/Plugins/cordova-plugin-fcm\"",
 					"\"LifeLineApp/Plugins/cordova-plugin-fcm\"",
 					"\"LifeLineApp/Plugins/cordova-plugin-fcm\"",
+					"\"LifeLineApp/Plugins/cordova-admobsdk\"",
 				);
 			};
 			name = Release;

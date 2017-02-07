@@ -73,9 +73,23 @@
 			    <div class="input-customlabel">Email</div>
 			    <input type="text" placeholder="john@xxx.com" class="inputCSS"  ng-model="user.email">
 			    </label>
+			    <label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">State</div>
+			    	<select id="StateID" name="geonameId" ng-model="user.SelectedOption.ID" ng-change="updateCities(user.SelectedOption)" ng-options="user as user.name for user in countries|orderBy:'name'" class="selectCSS">
+                        <option value="" selected>Select the state</option>
+                        <!--<option ng-repeat="country in countries" value="{{country.id}}">{{country.name}}</option>-->               
+                    </select>
+			    </label>
+			    <label class="item item-input item-stacked-label">
+			    <div class="input-customlabel">City</div>
+			    	<select id="cityID" name="cityId" ng-model="user.SelectedOption.ID" ng-change="updateDetails(user.SelectedOption)" ng-options="user as user.name for user in cities|orderBy:'name'" class="selectCSS">
+                        <option value="" selected>Select the city</option>
+                        <!--<option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>-->
+                    </select>
+			    </label>
 				<label class="item item-input item-stacked-label">
 			    <div class="input-customlabel">Blood Group(Optional)</div>
-			     	<select class="tour-Select" ng-model="user.bloodGroup" ng-options="opt as opt.label for opt in bloodGroupList ">
+			     	<select class="selectCSS" ng-model="user.bloodGroup" ng-options="opt as opt.label for opt in bloodGroupList ">
 			     	</select>
 			    </label>
 				<a ng-Click="btnSubmit(user)">

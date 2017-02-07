@@ -27,7 +27,7 @@
 
 .custom-ios-telephone , .custom-android-textsms {
     color: #e74c3c;
-    font-size:24px;
+    font-size:16px;
 }
 
 .accordionleftDiV {
@@ -45,4 +45,8 @@
 .accordionleftDiV, .accordionrightDiV {
     white-space: normal;
     line-height: 22px;
+}
+
+.set-height {
+    height: 40px;
 }

@@ -39,10 +39,16 @@
         },
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-admob": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-admobsdk": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         }
     }
