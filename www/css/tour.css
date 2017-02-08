@@ -29,3 +29,13 @@ display: inline-block;
     position: fixed;
     bottom: 60px;
 }
+
+.tour-text {
+    font-size: 28px;
+    line-height: 35px;
+}
+
+.img-100px{
+    height: 100px;
+    width: 100px
+}
