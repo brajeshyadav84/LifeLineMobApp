@@ -99,13 +99,13 @@ color: #e74c3c;
 {
     height: 40px;
     width: 100%;
-    background-color: blue;
     padding: 10px;
-    color: white;
     font-size: 23px;
     position: fixed;
     bottom: 0px;
     text-align: center;
+    background-color: #f8796c;
+    color: white;
 }
 
 .inputCSS {
