@@ -5,9 +5,51 @@
     },
     "config_munge": {
         "files": {
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
             "res/xml/config.xml": {
                 "parents": {
                     "/*": [
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.AdMob\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
                         {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
@@ -18,6 +60,10 @@
                         },
                         {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
                             "count": 1
                         },
                         {
@@ -43,52 +89,6 @@
                         {
                             "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.AdMob\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        }
-                    ]
-                }
-            },
-            "AndroidManifest.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 2
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-                            "count": 1
-                        }
-                    ],
-                    "/manifest": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
-                            "count": 1
-                        }
-                    ],
-                    "/manifest/application": [
-                        {
-                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
-                            "count": 1
                         }
                     ]
                 }
@@ -96,6 +96,12 @@
         }
     },
     "installed_plugins": {
+        "cordova-admobsdk": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-admob": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         },
@@ -106,6 +112,9 @@
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         },
         "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         },
         "cordova-plugin-shake": {
@@ -128,141 +137,119 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
-        },
-        "cordova-admobsdk": {
-            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
-        },
-        "cordova-plugin-admob": {
-            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         }
     },
     "dependent_plugins": {},
     "modules": [
         {
-            "id": "cordova-plugin-device.device",
+            "file": "plugins/cordova-plugin-admob/www/AdMob.js",
+            "id": "cordova-plugin-admob.AdMob",
+            "clobbers": [
+                "window.plugins.AdMob"
+            ]
+        },
+        {
             "file": "plugins/cordova-plugin-device/www/device.js",
-            "pluginId": "cordova-plugin-device",
+            "id": "cordova-plugin-device.device",
             "clobbers": [
                 "device"
             ]
         },
         {
-            "id": "cordova-plugin-device-motion.Acceleration",
             "file": "plugins/cordova-plugin-device-motion/www/Acceleration.js",
-            "pluginId": "cordova-plugin-device-motion",
+            "id": "cordova-plugin-device-motion.Acceleration",
             "clobbers": [
                 "Acceleration"
             ]
         },
         {
-            "id": "cordova-plugin-device-motion.accelerometer",
             "file": "plugins/cordova-plugin-device-motion/www/accelerometer.js",
-            "pluginId": "cordova-plugin-device-motion",
+            "id": "cordova-plugin-device-motion.accelerometer",
             "clobbers": [
                 "navigator.accelerometer"
             ]
         },
         {
-            "id": "cordova-plugin-inappbrowser.inappbrowser",
             "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-            "pluginId": "cordova-plugin-inappbrowser",
+            "id": "cordova-plugin-inappbrowser.inappbrowser",
             "clobbers": [
                 "cordova.InAppBrowser.open",
                 "window.open"
             ]
         },
         {
-            "id": "cordova-plugin-shake.Shake",
-            "file": "plugins/cordova-plugin-shake/www/shake.js",
-            "pluginId": "cordova-plugin-shake",
-            "clobbers": [
-                "shake"
-            ]
-        },
-        {
-            "id": "cordova-plugin-splashscreen.SplashScreen",
-            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-            "pluginId": "cordova-plugin-splashscreen",
-            "clobbers": [
-                "navigator.splashscreen"
-            ]
-        },
-        {
-            "id": "cordova-plugin-statusbar.statusbar",
-            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
-            "pluginId": "cordova-plugin-statusbar",
-            "clobbers": [
-                "window.StatusBar"
-            ]
-        },
-        {
-            "id": "cordova-plugin-x-socialsharing.SocialSharing",
-            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
-            "pluginId": "cordova-plugin-x-socialsharing",
-            "clobbers": [
-                "window.plugins.socialsharing"
-            ]
-        },
-        {
-            "id": "cordova-sms-plugin.Sms",
-            "file": "plugins/cordova-sms-plugin/www/sms.js",
-            "pluginId": "cordova-sms-plugin",
-            "clobbers": [
-                "window.sms"
-            ]
-        },
-        {
-            "id": "ionic-plugin-keyboard.keyboard",
-            "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
-            "pluginId": "ionic-plugin-keyboard",
-            "clobbers": [
-                "cordova.plugins.Keyboard"
-            ],
-            "runs": true
-        },
-        {
-            "id": "cordova-plugin-network-information.network",
             "file": "plugins/cordova-plugin-network-information/www/network.js",
-            "pluginId": "cordova-plugin-network-information",
+            "id": "cordova-plugin-network-information.network",
             "clobbers": [
                 "navigator.connection",
                 "navigator.network.connection"
             ]
         },
         {
-            "id": "cordova-plugin-network-information.Connection",
             "file": "plugins/cordova-plugin-network-information/www/Connection.js",
-            "pluginId": "cordova-plugin-network-information",
+            "id": "cordova-plugin-network-information.Connection",
             "clobbers": [
                 "Connection"
             ]
         },
         {
-            "id": "cordova-plugin-admob.AdMob",
-            "file": "plugins/cordova-plugin-admob/www/AdMob.js",
-            "pluginId": "cordova-plugin-admob",
+            "file": "plugins/cordova-plugin-shake/www/shake.js",
+            "id": "cordova-plugin-shake.Shake",
             "clobbers": [
-                "window.plugins.AdMob"
+                "shake"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+            "id": "cordova-plugin-x-socialsharing.SocialSharing",
+            "clobbers": [
+                "window.plugins.socialsharing"
+            ]
+        },
+        {
+            "file": "plugins/cordova-sms-plugin/www/sms.js",
+            "id": "cordova-sms-plugin.Sms",
+            "clobbers": [
+                "window.sms"
+            ]
+        },
+        {
+            "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+            "id": "ionic-plugin-keyboard.keyboard",
+            "clobbers": [
+                "cordova.plugins.Keyboard"
+            ],
+            "runs": true
         }
     ],
     "plugin_metadata": {
+        "cordova-admobsdk": "1.0.4",
+        "cordova-plugin-admob": "3.2.4",
         "cordova-plugin-console": "1.0.4",
         "cordova-plugin-device": "1.1.3",
         "cordova-plugin-device-motion": "1.2.2",
         "cordova-plugin-inappbrowser": "1.5.0",
+        "cordova-plugin-network-information": "1.3.1",
         "cordova-plugin-shake": "0.5.4",
         "cordova-plugin-splashscreen": "4.0.0",
         "cordova-plugin-statusbar": "2.2.0",
         "cordova-plugin-whitelist": "1.3.0",
         "cordova-plugin-x-socialsharing": "5.1.3",
         "cordova-sms-plugin": "0.1.11",
-        "ionic-plugin-keyboard": "2.2.1",
-        "cordova-plugin-network-information": "1.3.1",
-        "cordova-admobsdk": "1.0.4",
-        "cordova-plugin-admob": "3.2.4"
+        "ionic-plugin-keyboard": "2.2.1"
     }
 }

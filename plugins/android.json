@@ -7,6 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-admob": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         },
@@ -14,6 +17,9 @@
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         },
         "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
+        },
+        "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         },
         "cordova-plugin-shake": {
@@ -36,19 +42,13 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
-        },
-        "cordova-plugin-admob": {
-            "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         }
     },
     "dependent_plugins": {
-        "cordova-plugin-device-motion": {
+        "cordova-admobsdk": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         },
-        "cordova-admobsdk": {
+        "cordova-plugin-device-motion": {
             "PACKAGE_NAME": "com.ionicframework.lifelineapp168391"
         }
     }
