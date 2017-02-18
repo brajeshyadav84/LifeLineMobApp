@@ -22,12 +22,12 @@ display: inline-block;
 {
     height: 40px;
     width: 100%;
-    background-color: blue;
     padding: 10px;
     color: white;
     font-size: 23px;
     position: fixed;
     bottom: 60px;
+    background-color: #f8796c;
 }
 
 .tour-text {

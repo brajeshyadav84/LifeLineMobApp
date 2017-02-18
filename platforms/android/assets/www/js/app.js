@@ -54,7 +54,7 @@ LifeLine.config(function($stateProvider, $urlRouterProvider) {
       url: '/addContact',
       views: {
         'menuContent' :{
-          templateUrl: "templates/ManageContact.html",
+          templateUrl: "templates/ContactUs.html",
           controller: 'dashboardCtrl'
         }
       }
