@@ -41,7 +41,8 @@
                           ng-class="{active: isGroupShown(group)}">
                     <i class="icon" ng-class="isGroupShown(group) ? 'ion-chevron-down custom-chevron-down' : 'ion-chevron-right'"></i>
                     &nbsp;
-                   {{group.h_name}}
+                   <h3>{{group.h_name}}</h3>
+                   <!--<p>This is a subtitle</p>-->
                 </ion-item>
                 <ion-item class="item-accordion"
                           ng-repeat="item in group.items"
@@ -74,6 +75,12 @@
         </ion-list>
     </ion-content>
     <div class="bottomCircle" ng-Click="btnDoners()">
-            Blood Doner's 
+            
+            <!--<span class="height-fix">
+    <a class="content donercontent">
+      <i class="ion-ios-arrow-up"> </i>
+      <p>Blood Doner's</p> 
+    </a>-->
+  </span>
     </div>
 </ion-view>

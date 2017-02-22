@@ -118,16 +118,17 @@ color: #e74c3c;
     bottom: 30px;
     position: fixed;
     right: 26px;
-    height: 60px;
-    width: 60px;
-    background-color: red;
-    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    background:transparent url('/img/BloodDoner.png') ;
+    background-repeat: no-repeat;
+    /*border-radius: 50%;*/
     z-index: 100;
     color: white;
     text-align: center;
-    padding-top: 16px;
+    padding: 0px;
     border-color: #e42112;
-    background-color: #ef473a;
+    /*background-color: #ef473a;*/
 }
 
 

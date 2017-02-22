@@ -50,3 +50,15 @@
 .set-height {
     height: 40px;
 }
+.emergencywordwrap{
+    white-space: normal;
+}
+.emergencylistcard{
+     margin-bottom: 1px !important;
+     margin-top: 1px !important;
+}
+.donercontent
+{
+    color: whitesmoke !important;
+    font-size: 14px;
+}

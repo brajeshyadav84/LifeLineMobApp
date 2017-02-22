@@ -67,7 +67,7 @@ var jsonLocation=URLS.getLocalJsonforHospitals;
     if (objSelected.ID != null && objSelected.ID != "") {
             console.log(objSelected);            
             BloodBankPage.gethospitals(objSelected.ID.name,$scope.selectedstate).then(function (response) {
-                console.log(response.data);
+                
                 if (response.data.success) {
                     for (var i = 0; i < response.data.count; i++) {
 
