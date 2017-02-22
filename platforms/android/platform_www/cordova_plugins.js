@@ -1,107 +1,94 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "id": "cordova-plugin-admob.AdMob",
         "file": "plugins/cordova-plugin-admob/www/AdMob.js",
-        "pluginId": "cordova-plugin-admob",
+        "id": "cordova-plugin-admob.AdMob",
         "clobbers": [
             "window.plugins.AdMob"
         ]
     },
     {
-        "id": "cordova-plugin-device.device",
         "file": "plugins/cordova-plugin-device/www/device.js",
-        "pluginId": "cordova-plugin-device",
+        "id": "cordova-plugin-device.device",
         "clobbers": [
             "device"
         ]
     },
     {
-        "id": "cordova-plugin-device-motion.Acceleration",
         "file": "plugins/cordova-plugin-device-motion/www/Acceleration.js",
-        "pluginId": "cordova-plugin-device-motion",
+        "id": "cordova-plugin-device-motion.Acceleration",
         "clobbers": [
             "Acceleration"
         ]
     },
     {
-        "id": "cordova-plugin-device-motion.accelerometer",
         "file": "plugins/cordova-plugin-device-motion/www/accelerometer.js",
-        "pluginId": "cordova-plugin-device-motion",
+        "id": "cordova-plugin-device-motion.accelerometer",
         "clobbers": [
             "navigator.accelerometer"
         ]
     },
     {
-        "id": "cordova-plugin-inappbrowser.inappbrowser",
         "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-        "pluginId": "cordova-plugin-inappbrowser",
+        "id": "cordova-plugin-inappbrowser.inappbrowser",
         "clobbers": [
             "cordova.InAppBrowser.open",
             "window.open"
         ]
     },
     {
-        "id": "cordova-plugin-network-information.network",
         "file": "plugins/cordova-plugin-network-information/www/network.js",
-        "pluginId": "cordova-plugin-network-information",
+        "id": "cordova-plugin-network-information.network",
         "clobbers": [
             "navigator.connection",
             "navigator.network.connection"
         ]
     },
     {
-        "id": "cordova-plugin-network-information.Connection",
         "file": "plugins/cordova-plugin-network-information/www/Connection.js",
-        "pluginId": "cordova-plugin-network-information",
+        "id": "cordova-plugin-network-information.Connection",
         "clobbers": [
             "Connection"
         ]
     },
     {
-        "id": "cordova-plugin-shake.Shake",
         "file": "plugins/cordova-plugin-shake/www/shake.js",
-        "pluginId": "cordova-plugin-shake",
+        "id": "cordova-plugin-shake.Shake",
         "clobbers": [
             "shake"
         ]
     },
     {
-        "id": "cordova-plugin-splashscreen.SplashScreen",
         "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-        "pluginId": "cordova-plugin-splashscreen",
+        "id": "cordova-plugin-splashscreen.SplashScreen",
         "clobbers": [
             "navigator.splashscreen"
         ]
     },
     {
-        "id": "cordova-plugin-statusbar.statusbar",
         "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
-        "pluginId": "cordova-plugin-statusbar",
+        "id": "cordova-plugin-statusbar.statusbar",
         "clobbers": [
             "window.StatusBar"
         ]
     },
     {
-        "id": "cordova-plugin-x-socialsharing.SocialSharing",
         "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
-        "pluginId": "cordova-plugin-x-socialsharing",
+        "id": "cordova-plugin-x-socialsharing.SocialSharing",
         "clobbers": [
             "window.plugins.socialsharing"
         ]
     },
     {
-        "id": "cordova-sms-plugin.Sms",
         "file": "plugins/cordova-sms-plugin/www/sms.js",
-        "pluginId": "cordova-sms-plugin",
+        "id": "cordova-sms-plugin.Sms",
         "clobbers": [
             "window.sms"
         ]
     },
     {
-        "id": "ionic-plugin-keyboard.keyboard",
         "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
-        "pluginId": "ionic-plugin-keyboard",
+        "id": "ionic-plugin-keyboard.keyboard",
         "clobbers": [
             "cordova.plugins.Keyboard"
         ],

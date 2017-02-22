@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Brajesh CodeBase\LifeLineApp\platforms\android\CordovaLib\assets"/><source path="C:\Brajesh CodeBase\LifeLineApp\platforms\android\CordovaLib\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="C:\Brajesh CodeBase\LifeLineApp\platforms\android\CordovaLib\src\release\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Nitesh_CodeBase\LifeLineMobApp\platforms\android\CordovaLib\assets"/></dataSet><dataSet config="release"><source path="C:\Nitesh_CodeBase\LifeLineMobApp\platforms\android\CordovaLib\src\release\assets"/></dataSet></merger>

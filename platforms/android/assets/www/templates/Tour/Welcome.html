@@ -71,7 +71,7 @@
 			    </label>
 				<label class="item item-input item-stacked-label">
 			    <div class="input-customlabel">Mobile</div>
-			    <input type="text" placeholder="1234567890" class="inputCSS"  ng-model="user.mobile">
+			    <input type="text" placeholder="+91-12345678" class="inputCSS"  ng-model="user.mobile">
 			    </label>
 				<label class="item item-input item-stacked-label">
 			    <div class="input-customlabel">Email</div>
@@ -86,7 +86,7 @@
 			    </label>
 			    <label class="item item-input item-stacked-label">
 			    <div class="input-customlabel">City</div>
-			    	<select id="cityID" name="cityId" ng-model="user.SelectedOption.ID" ng-change="updateDetails(user.SelectedOption)" ng-options="user as user.name for user in cities|orderBy:'name'" class="selectCSS">
+			    	<select id="cityID" name="cityId" ng-model="cities.SelectedOption.ID"  ng-options="user as user.name for user in cities|orderBy:'name'" class="selectCSS">
                         <option value="" selected>Select the city</option>
                         <!--<option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>-->
                     </select>
