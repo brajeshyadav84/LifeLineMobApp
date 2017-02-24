@@ -79,7 +79,7 @@
 			    </label>
 			    <label class="item item-input item-stacked-label">
 			    <div class="input-customlabel">State</div>
-			    	<select id="StateID" name="geonameId" ng-model="user.SelectedOption.ID" ng-change="updateCities(user.SelectedOption)" ng-options="user as user.name for user in countries|orderBy:'name'" class="selectCSS">
+			    	<select id="StateID" name="geonameId" ng-model="user.SelectedState.ID" ng-change="updateCities(user.SelectedState)" ng-options="user as user.name for user in countries|orderBy:'name'" class="selectCSS">
                         <option value="" selected>Select the state</option>
                         <!--<option ng-repeat="country in countries" value="{{country.id}}">{{country.name}}</option>-->               
                     </select>

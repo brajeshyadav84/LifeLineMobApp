@@ -11,10 +11,18 @@ LifeLine.controller('tourCtrl', function ($scope, $state, lifeLineService, $stat
         {'id': 8, 'label': 'AB -'},
     ];
 
-    //$scope.user.bloodGroup= $scope.bloodGroupList[0]; // Set by default the value "test1"
+    ////$scope.user.bloodGroup= $scope.bloodGroupList[0]; // Set by default the value "test1"
 
 	$scope.btnSubmit = function (userInfo) {
-		console.log(userInfo);
+		var userDetails = {
+            email: userInfo.email,
+            name: userInfo.name,
+            mobile: userInfo.mobile,
+            bloodGroup: userInfo.bloodGroup,
+            state: userInfo.SelectedState.ID,
+            city: userInfo.SelectedOption.ID
+        }
+        localStorage.setItem("userDetails", JSON.stringify(userDetails));
 		$state.go("app.dashboard");
 	};
 
@@ -22,7 +30,7 @@ LifeLine.controller('tourCtrl', function ($scope, $state, lifeLineService, $stat
     $scope.countries = [];
     $scope.cities = [];
     $scope.selectedstate = '';
-var jsonLocation=URLS.getLocalJsonforBlodBank;
+    var jsonLocation=URLS.getLocalJsonforBlodBank;
     loadLocaljson.get(jsonLocation).then(function (response) {
         //console.log(response.data);        
         $scope.selectedstate = '';

@@ -87,4 +87,27 @@
 
 
 	</ion-content>
+
+	<!-- The Modal -->
+    <div id="myModal" class="modal" ng-show="isShowModal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" ng-click="onClickCloseModal()">&times;</span>
+          <h2>&nbsp;</h2>
+        </div>
+        <div class="modal-body">
+          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS8IHLq0XmNy2xm-vbTZgjjQW5f2KFsv5VxSoL4xTdvShi4gHiF2qXEsQ">
+          <p>Title</p>
+          <p>Detail Text goes here......</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" ng-click="onClickShare()">Share with Friends</button>
+        </div>
+      </div>
+
+    </div>
+
+
 </ion-view>
