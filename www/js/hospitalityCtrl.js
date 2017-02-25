@@ -1,5 +1,5 @@
 
-LifeLine.controller('hospitalityCtrl', function ($scope, $state, $stateParams, $ionicLoading , BloodBankPage, loadLocaljson, lifeLineService) {
+LifeLine.controller('hospitalityCtrl', function ($scope, $state, $stateParams, $ionicLoading , BloodBankPage, loadLocaljson, lifeLineService, $cordovaSocialSharing) {
     
     $scope.hospitalityType = $stateParams.hospitalityType;
 

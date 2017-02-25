@@ -1,6 +1,6 @@
 //angular.module('starter.controllers', [])
 
-LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, loadLocaljson, lifeLineService) {
+LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, loadLocaljson, lifeLineService, $cordovaSocialSharing) {
     localStorage.setItem("isFirstTime", true);
     $scope.isShowModal = false;
 

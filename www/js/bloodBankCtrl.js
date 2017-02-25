@@ -137,7 +137,7 @@ var jsonLocation=URLS.getLocalJsonforBlodBank;
         var contact = data.contact != "NA" ? "Contact -: "+data.contact : "";
         var result = data.h_name + address + contact;
         console.log(result);
-        $cordovaSocialSharing.share(result, 'LifeLine', null, 'http://www.interviewgully.com/API/appLauncher.html');
+        $cordovaSocialSharing.share(result, 'LifeLine India!', null, 'http://www.interviewgully.com/API/appLauncher.html');
     };
 
 
