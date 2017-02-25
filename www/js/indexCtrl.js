@@ -2,7 +2,7 @@
 
 LifeLine.controller('indexCtrl', function ($scope, $state, $stateParams, $cordovaSocialSharing ) { //$cordovaSocialSharing, $ionicPopup
     if (!!localStorage.isFirstTime) {
-        $state.go("tour");
+        $state.go("app.dashboard");
     } else {
         $state.go("tour");
     }
