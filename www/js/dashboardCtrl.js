@@ -2,6 +2,7 @@
 
 LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, loadLocaljson, lifeLineService) {
     localStorage.setItem("isFirstTime", true);
+    $scope.isShowModal = false;
 
     $scope.onClickHospitality = function (Type) {
         $state.go("app.Hospitality", {"hospitalityType": Type});
@@ -68,7 +69,7 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, load
 
     /// Start :: Share App
     $scope.onClickShare = function (){
-        window.plugins.socialsharing.share('Hi!, It is nice app for Software Developers', 'InterviewGully', null, 'http://www.interviewgully.com/API/appLauncher.html');
+        $cordovaSocialSharing.share('LifeLine India!, aim to help you', 'LifeLine India', null, 'http://www.interviewgully.com/API/appLauncher.html');
     };
     /// End :: Share App
 
@@ -98,10 +99,17 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, load
                 $scope.showConfirm(data.iosSettings.itunesurl);
             }
         }
+
+        $scope.isShowModal = true;
         
     },function(error){
         console.log(error);
     });
+
+    $scope.onClickCloseModal = function (){
+        $scope.isShowModal = false;
+    };
+
 
 
     $scope.showConfirm = function(storeURL) {
@@ -154,6 +162,8 @@ var jsonLocation=URLS.getLocalJsonforBlodBank;
         }
           console.log($scope.cities);
     }
+
+
 
 
 })

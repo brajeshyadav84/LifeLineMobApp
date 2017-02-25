@@ -26,8 +26,13 @@ display: inline-block;
     color: white;
     font-size: 23px;
     position: fixed;
+<<<<<<< HEAD
    /*bottom: 40px;*/
     background-color: #f8796c;
+=======
+    bottom: 60px;
+    background-color: green;
+>>>>>>> 26316ba4b8da582977e5e79cacc97f525c6b9b61
 }
 
 .tour-text {
