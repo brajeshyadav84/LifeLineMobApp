@@ -1,6 +1,6 @@
 //angular.module('starter.controllers', [])
 
-LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, loadLocaljson, lifeLineService) {
+LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, loadLocaljson, lifeLineService, $cordovaSocialSharing) {
     localStorage.setItem("isFirstTime", true);
     $scope.isShowModal = false;
 
@@ -26,14 +26,6 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, load
         {'id': 8, 'label': 'AB -'},
     ];
     
-    if(!!localStorage.userDetails) {
-        if(localStorage.userDetails.length > 0){
-            var userCollection = JSON.parse(localStorage.userDetails);
-            console.log(userCollection);
-            $scope.user = userCollection;
-        }
-    }
-
     $scope.btnSave = function (userInfo) {
         localStorage.setItem("userDetails", JSON.stringify(userInfo));
         console.log(userInfo);
@@ -69,7 +61,7 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, load
 
     /// Start :: Share App
     $scope.onClickShare = function (){
-        $cordovaSocialSharing.share('LifeLine India!, aim to help you', 'LifeLine India', null, 'http://www.interviewgully.com/API/appLauncher.html');
+        $cordovaSocialSharing.share('LifeLine India!, aim to help you', 'LifeLine India!', null, 'http://www.interviewgully.com/API/appLauncher.html');
     };
     /// End :: Share App
 
@@ -163,6 +155,16 @@ var jsonLocation=URLS.getLocalJsonforBlodBank;
           console.log($scope.cities);
     }
 
+    if(!!localStorage.userDetails) {
+        if(localStorage.userDetails.length > 0){
+            var userCollection = JSON.parse(localStorage.userDetails);
+            console.log("userCollection");console.log(userCollection);
+            $scope.user = userCollection;
+            //$scope.updateCities(userCollection.SelectedState);
+            //<option label="Chandigarh" value="object:70">Chandigarh</option>
+            //$('#StateID').append('<option selected label="'+userCollection.SelectedState.ID.name+'" value="'+userCollection.SelectedState.ID.$$hashKey+'">Chandigarh</option>');
+        }
+    }
 
 
 

@@ -2,7 +2,7 @@
 
 LifeLine.controller('indexCtrl', function ($scope, $state, $stateParams, $cordovaSocialSharing ) { //$cordovaSocialSharing, $ionicPopup
     if (!!localStorage.isFirstTime) {
-        $state.go("tour");
+        $state.go("app.dashboard");
     } else {
         $state.go("tour");
     }
@@ -20,7 +20,7 @@ LifeLine.controller('indexCtrl', function ($scope, $state, $stateParams, $cordov
 	}
 
 	$scope.shareMe = function() {
-        $cordovaSocialSharing.share('LifeLine India!, aim to help you', 'LifeLine India', null, 'http://www.interviewgully.com/API/appLauncher.html');
+        $cordovaSocialSharing.share('LifeLine India!, aim to help you', 'LifeLine India!', null, 'http://www.interviewgully.com/API/appLauncher.html');
     };
 
 })
