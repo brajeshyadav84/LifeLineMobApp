@@ -26,14 +26,6 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, load
         {'id': 8, 'label': 'AB -'},
     ];
     
-    if(!!localStorage.userDetails) {
-        if(localStorage.userDetails.length > 0){
-            var userCollection = JSON.parse(localStorage.userDetails);
-            console.log(userCollection);
-            $scope.user = userCollection;
-        }
-    }
-
     $scope.btnSave = function (userInfo) {
         localStorage.setItem("userDetails", JSON.stringify(userInfo));
         console.log(userInfo);
@@ -163,6 +155,16 @@ var jsonLocation=URLS.getLocalJsonforBlodBank;
           console.log($scope.cities);
     }
 
+    if(!!localStorage.userDetails) {
+        if(localStorage.userDetails.length > 0){
+            var userCollection = JSON.parse(localStorage.userDetails);
+            console.log("userCollection");console.log(userCollection);
+            $scope.user = userCollection;
+            $scope.updateCities(userCollection.SelectedState);
+            //<option label="Chandigarh" value="object:70">Chandigarh</option>
+            //$('#StateID').append('<option selected label="'+userCollection.SelectedState.ID.name+'" value="'+userCollection.SelectedState.ID.$$hashKey+'">Chandigarh</option>');
+        }
+    }
 
 
 

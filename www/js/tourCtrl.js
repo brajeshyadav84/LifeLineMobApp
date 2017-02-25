@@ -18,9 +18,9 @@ LifeLine.controller('tourCtrl', function ($scope, $state, lifeLineService, $stat
             email: userInfo.email,
             name: userInfo.name,
             mobile: userInfo.mobile,
-            bloodGroup: userInfo.bloodGroup,
-            state: userInfo.SelectedState.ID,
-            city: userInfo.SelectedOption.ID
+            bloodGroup: userInfo.bloodGroup.label,
+            SelectedState: userInfo.SelectedState,
+            SelectedOption: userInfo.SelectedOption
         }
         localStorage.setItem("userDetails", JSON.stringify(userDetails));
 		$state.go("app.dashboard");
@@ -57,7 +57,7 @@ LifeLine.controller('tourCtrl', function ($scope, $state, lifeLineService, $stat
                 };
             }
         }
-          console.log($scope.cities);
+          //console.log($scope.cities);
     };
 
 
