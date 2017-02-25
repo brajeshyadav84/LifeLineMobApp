@@ -2,19 +2,35 @@ LifeLine.controller('helpCtrl', function ($scope, $state, lifeLineService, $stat
 
 	$scope.helpForShake = $stateParams.helpForShake;
 
-	console.log($scope.helpForShake);
-	if(window.shake) {
-		if($scope.helpForShake){
-			shake.startWatch(onShake, 25 /*, onError */);
-		}
-	}
+	//listen to shake event
+    var shakeEvent = new Shake({threshold: 10});
+    shakeEvent.start();
+    window.addEventListener('shake', function(){
+        
+    }, false);
 
-	$scope.shakeHandler = function() {
-		onShake();
-	};
+    //stop listening
+    function stopShake(){
+        shakeEvent.stop();
+    }
+
+    //check if shake is supported or not.
+    if(!("ondevicemotion" in window)){alert("Not Supported");}
+
+
+	console.log($scope.helpForShake);
+	// if(window.shake) {
+	// 	if($scope.helpForShake){
+	// 		shake.startWatch(onShake, 25);
+	// 	}
+	// }
+
+	// $scope.shakeHandler = function() {
+	// 	onShake();
+	// };
 
 	var onShake = function () {
-		alert("testing done");
+		alert("Shake testing done");
 	  	//// Fired when a shake is detected
 	    // var number = '88765035';
 	    // var message = 'test message';
@@ -33,8 +49,8 @@ LifeLine.controller('helpCtrl', function ($scope, $state, lifeLineService, $stat
 	    // sms.send(number, message, options, success, error);
 	};
 
-	var onError = function () {
-	  // Fired when there is an accelerometer error (optional)
-	};
+	// var onError = function () {
+	//   // Fired when there is an accelerometer error (optional)
+	// };
 
 })

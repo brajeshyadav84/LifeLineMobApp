@@ -160,7 +160,7 @@ var jsonLocation=URLS.getLocalJsonforBlodBank;
             var userCollection = JSON.parse(localStorage.userDetails);
             console.log("userCollection");console.log(userCollection);
             $scope.user = userCollection;
-            $scope.updateCities(userCollection.SelectedState);
+            //$scope.updateCities(userCollection.SelectedState);
             //<option label="Chandigarh" value="object:70">Chandigarh</option>
             //$('#StateID').append('<option selected label="'+userCollection.SelectedState.ID.name+'" value="'+userCollection.SelectedState.ID.$$hashKey+'">Chandigarh</option>');
         }
