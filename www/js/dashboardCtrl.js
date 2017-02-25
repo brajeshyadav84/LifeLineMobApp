@@ -61,7 +61,7 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicPopup, load
 
     /// Start :: Share App
     $scope.onClickShare = function (){
-        $cordovaSocialSharing.share('LifeLine India!, aim to help you', 'LifeLine India', null, 'http://www.interviewgully.com/API/appLauncher.html');
+        $cordovaSocialSharing.share('LifeLine India!, aim to help you', 'LifeLine India!', null, 'http://www.interviewgully.com/API/appLauncher.html');
     };
     /// End :: Share App
 
