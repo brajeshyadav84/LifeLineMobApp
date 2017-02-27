@@ -25,9 +25,9 @@ LifeLine.controller('helpCtrl', function ($scope, $state, lifeLineService, $stat
 	// 	}
 	// }
 
-	// $scope.shakeHandler = function() {
-	// 	onShake();
-	// };
+	$scope.shakeHandler = function() {
+		onShake();
+	};
 
 	var onShake = function () {
 		//alert("Shake testing done");
