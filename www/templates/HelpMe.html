@@ -9,15 +9,17 @@
     </ion-nav-title>
     <ion-nav-back-button class="button-clear go-back">
     </ion-nav-back-button>
-    <ion-content class="has-header">
+    <ion-content class="has-header bgtheme">
         
-        <ion-list>
-            <div style="text-align: center;padding-top: 10%;font-size: 20px;">
+        <ion-list >
+            <div style="text-align: center;padding: 10%;font-size: 20px;font-weight: bold">
                 Shake your phone <br />or <br /> Press below image for help.
             </div>
 
-            <div style="text-align: center;padding-top: 30%;">
-                <img ng-Click="shakeHandler()" src="./img/helpMe.png" style="height: 200px;border-radius: 50%;background-color: lightgray;box-shadow: 0 0 3px #800505;" />
+            <div ng-Click="shakeHandler()" style="text-align: center;height:250px;padding-top: 30%; background:url(./img/HelpingHands.svg);background-size:100%;
+    background-repeat: no-repeat;">
+                <!--<img ng-Click="shakeHandler()" src="./img/helpMe.png" style="height: 200px;border-radius: 50%;background-color: lightgray;box-shadow: 0 0 3px #800505;" />-->
+
             </div>
         </ion-list>
 

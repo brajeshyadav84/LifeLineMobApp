@@ -27,7 +27,7 @@
 
 .custom-ios-telephone , .custom-android-textsms {
     color: #e74c3c;
-    font-size:16px;
+    font-size:15px;
 }
 
 .accordionleftDiV {
@@ -51,7 +51,7 @@
     height: 40px;
 }
 .emergencywordwrap{
-    white-space: normal;
+    white-space: normal !important;
 }
 .emergencylistcard{
      margin-bottom: 1px !important;
@@ -61,4 +61,13 @@
 {
     color: whitesmoke !important;
     font-size: 14px;
+}
+.emergency-ios-telephone , .emergency-android-textsms {
+    color:whitesmoke;
+    font-size:15px;
+    text-decoration: none;
+}
+.bgtheme{
+    background-color: #f8796c !important;
+    color: white !important;
 }

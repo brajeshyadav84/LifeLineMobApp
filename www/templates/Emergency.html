@@ -13,21 +13,41 @@
         <ion-list>
             <div>
                 <div ng-repeat="item in emergencyList| orderBy:'description'">
-                    <div class="card emergencylistcard">
-                            <div class="item item-divider">
+
+
+
+                    <div class="list">
+
+                        <a  class="item item-avatar bgtheme" href="tel:{{item.helpline}}">
+                            <img src="./img/phone-39-64.png">
+                            <p style="font-weight:bold;color: white;"><span class="icon ion-ios-telephone"></span> {{item.helpline}}</p>
+                            <h2 style="color: white;" class="emergencywordwrap "> {{item.description}}</h2>
+                            <!--<p><span class="icon ion-ios-telephone"></span> {{item.helpline}}</p>-->
+                        </a>
+                        <!--<div class="item item-button-right emergencywordwrap ">
+                            {{item.description}}
+                            <button class="button button-assertive">
+      <i class="icon ion-ios-telephone"></i>
+      <a class="emergency-ios-telephone" href="tel:{{item.helpline}}"> {{item.helpline}} </a>
+    </button>
+                        </div>-->
+
+                    </div>
+                    <!--<div class="card emergencylistcard">
+                            <div class="item item-divider" style="background-color: #ef473a;">
                                 <div>
-                                   <div class="custom-android-textsms set-height emergencywordwrap">
+                                   <div class="emergency-ios-telephone set-height emergencywordwrap">
                                         {{item.description}}
                                    </div>
-                                   <div style="width:100px"><a href="tel:{{item.helpline}}"><i class="icon ion-ios-telephone custom-ios-telephone" style="font-size: 16px;padding-right: 6px;"></i> {{item.helpline}} </a>
+                                   <div  style="width:100px"><a class="emergency-ios-telephone" href="tel:{{item.helpline}}"><i class="icon ion-ios-telephone " style="font-size: 15px;padding-right: 6px;"></i> {{item.helpline}} </a>
                                    </div>
                                    
                                 </div>
                             </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
-            
+
         </ion-list>
     </ion-content>
 </ion-view>
