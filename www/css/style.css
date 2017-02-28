@@ -247,14 +247,19 @@ padding-top: 50px;
 
 .modal-header {
     padding: 2px 16px;
-    height: 15%;
+    height: 10%;
     color: white;
 }
 
 .modal-body {
     padding: 2px 16px;
-    height: 75%;
+    height: 80%;
     text-align: center;
+}
+
+.popup-body-content{
+    height: 55%;
+    overflow: scroll;
 }
 
 .modal-footer {

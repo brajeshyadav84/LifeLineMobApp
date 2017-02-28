@@ -100,9 +100,9 @@
           <h2>&nbsp;</h2>
         </div>
         <div class="modal-body">
-          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS8IHLq0XmNy2xm-vbTZgjjQW5f2KFsv5VxSoL4xTdvShi4gHiF2qXEsQ">
-          <p>Title</p>
-          <p>Detail Text goes here......</p>
+          <img style="height: 80px;width: 80px;" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS8IHLq0XmNy2xm-vbTZgjjQW5f2KFsv5VxSoL4xTdvShi4gHiF2qXEsQ">
+          <h3 style="text-transform: capitalize;" ng-bind-html="modalTitle | unsafe"></h3>
+          <div class="popup-body-content" ng-bind-html="modalDesc | unsafe"></div>
         </div>
         <div class="modal-footer">
           <button class="btn" ng-click="onClickShare()">Share with Friends</button>

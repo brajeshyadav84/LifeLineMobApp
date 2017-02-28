@@ -83,6 +83,8 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicLoading, $i
         }
 
         $scope.isShowModal = true;
+        $scope.modalTitle = "data.modalTitle";
+        $scope.modalDesc = "data.modalDesc";
 
     }, function (error) {
         console.log(error);

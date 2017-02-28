@@ -138,3 +138,5 @@ LifeLine.config(function($stateProvider, $urlRouterProvider) {
 });
 
 
+// Filter
+LifeLine.filter('unsafe', function($sce) { return $sce.trustAsHtml; });
