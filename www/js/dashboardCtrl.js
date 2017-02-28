@@ -50,8 +50,11 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicLoading, $i
     /// End :: Feedback
 
     /// Start :: Share App
-    $scope.onClickShare = function () {
-        $cordovaSocialSharing.share('LifeLine India!, aim to help you', 'LifeLine India!', null, 'http://www.interviewgully.com/API/appLauncher.html');
+    $scope.onClickShare = function (type) {
+        if(type == 'popup')
+            $cordovaSocialSharing.share('LifeLine India!, aim to help you', 'LifeLine India! ', null, $scope.modalDesc);
+        else 
+            $cordovaSocialSharing.share('LifeLine India!, aim to help you', 'LifeLine India!', null, 'http://www.interviewgully.com/API/appLauncher.html');
     };
     /// End :: Share App
 
@@ -82,9 +85,15 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicLoading, $i
             }
         }
 
-        $scope.isShowModal = true;
-        $scope.modalTitle = "data.modalTitle";
-        $scope.modalDesc = "data.modalDesc";
+        if($scope.targetState == data.targetState){
+             $scope.isShowModal = data.isShowModal;
+        } else if ($scope.targetState == $scope.user.SelectedState.ID.name){
+             console.log($scope.user.SelectedState.ID.name);
+             $scope.isShowModal = data.isShowModal;
+        }
+        $scope.modalTitle = data.modalTitle;
+        $scope.modalDesc = data.modalDesc;
+
 
     }, function (error) {
         console.log(error);
