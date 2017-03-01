@@ -85,9 +85,9 @@ LifeLine.controller('dashboardCtrl', function ($scope, $state, $ionicLoading, $i
             }
         }
 
-        if($scope.targetState == data.targetState){
+        if("All" == data.targetState){
              $scope.isShowModal = data.isShowModal;
-        } else if ($scope.targetState == $scope.user.SelectedState.ID.name){
+        } else if (data.targetState == $scope.user.SelectedState.ID.name){
              console.log($scope.user.SelectedState.ID.name);
              $scope.isShowModal = data.isShowModal;
         }
