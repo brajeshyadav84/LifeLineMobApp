@@ -6,7 +6,8 @@
 
 .landing_bg{
 	/*background-color: #aa1d1d;*/
-	background-color: #f8796c;    
+	/*background-color: #f8796c;    */
+    background-color:#ec1b06;
 	color: white;
 }
 
@@ -120,7 +121,7 @@ color: #e74c3c;
     right: 26px;
     height: 70px;
     width: 70px;
-    background:transparent url('/img/BloodDoner.png') ;
+    background:transparent url(../img/BloodDoner.png) ;
     background-repeat: no-repeat;
     /*border-radius: 50%;*/
     z-index: 100;
@@ -178,7 +179,7 @@ padding-top: 50px;
 }
 
 .selectCSS {
-    background-color: #ebebe5 !important;
+    /*background-color: #ebebe5 !important;*/
     width: 95% !important;
     padding-left: 10px !important;
     height: 34px;
@@ -285,4 +286,146 @@ padding-top: 50px;
 
 ::-webkit-scrollbar { 
     display: none; 
+}
+/*Added for stying the DashBoard page.*/
+#dashboard {
+    background-image: url(../img/LeafGreenDesignTrans.png);   
+    color: white;
+    background-size: cover;
+}
+#dashboard:before {
+     content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+    background-color:rgba(236, 27, 6, 0.53);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#8025A7B4,endColorstr=#8025A7B4);
+    zoom: 1;
+}
+
+/*Added for stying the Feedback page.*/
+#feedback {
+    background-image: url(../img/grey.jpg);
+    /*position: relative;*/
+    padding: 0;
+    color: white;
+    background-size: cover;
+}
+#feedback:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+    background-color: rgba(37, 167, 180, 0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#8025A7B4,endColorstr=#8025A7B4);
+    zoom: 1;
+}
+#feedback .form-control-feedback {
+  top: 13px;
+  right: 20px;
+  width: inherit;
+  border: none;
+  background: #25a7b4;
+  color: white;
+  height: 40px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 0 15px;
+  font-weight: bold;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+#feedback .form-control-feedback:hover {
+  background: #1e8892;
+}
+#Managecontact .input-label,
+#feedback .input-label
+{
+color: white;
+font-weight: bold;
+}
+#Managecontact .item-input input, .item-input textarea,
+#feedback .item-input input, .item-input textarea {
+    width: 95% !important;
+    padding: 10px;
+    font-weight: bold;
+}
+.Managecontact-heading,
+.feedback-heading {
+  text-align: center;
+  padding: 10px 0;
+  color: white ;
+}
+.Managecontact-heading h1, .Managecontact-heading h2, .Managecontact-heading h3,
+.feedback-heading h1, .feedback-heading h2, .feedback-heading h3 {
+  text-transform: uppercase;
+  color: white ;
+}
+.Managecontact-heading h4, .Managecontact-heading p,
+.feedback-heading h4, .feedback-heading p {
+  color: white;
+  line-height: 22px;
+}
+.Managecontact-heading i,
+.feedback-heading i {
+  color: #d9d9d9;
+}
+.Managecontact-heading span,
+.feedback-heading span {
+  font-weight: bold;
+}
+.Managecontact-heading span.divider,
+.feedback-heading span.divider {
+  position: relative;
+  height: 2px;
+  width: 22%;
+  background: white;
+  display: block;
+  margin: 10px auto;
+}
+/*Added for stying the ManageContact page.*/
+
+#Managecontact {
+    background-image: url(../img/download_bk.jpg);   
+    color: white;
+    background-size: cover;
+}
+#Managecontact:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url(../img/pattern.png) repeat;
+}
+.customtitle{
+     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    margin: 0 10px;
+    min-width: 30px;
+    height: 43px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 44px;
 }

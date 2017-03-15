@@ -1,25 +1,52 @@
 <ion-view view-title="Feedback">
-  <ion-nav-buttons side="left">
-    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-  </ion-nav-buttons>
-  <ion-content class="has-header" style="height:80%">
-       		
-			<div class="list">
-				<!-- <label class="item item-input item-stacked-label">
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	<ion-content class="has-header" id="feedback">
+
+		<div class="row">
+			<div class="col col-10"></div>
+			<div class="col feedback-heading">
+				<h3>LifeLine<span> get in touch</span></h3>
+				<span class="divider"></span>
+			</div>
+			<div class="col col-10"></div>
+
+		</div>
+
+
+		<div class="list">
+			<!-- <label class="item item-input item-stacked-label">
 			    <div class="input-customlabel">Email :</div>
 			    <input type="text" placeholder="john@xxx.com" class="inputCSS">
 			    </label> -->
-
-			    <label class="item item-input item-stacked-label">
-			    <div class="input-customlabel"> Suggestion :</div>
-			    <textarea name="Text1" cols="40" rows="10" " class="inputCSS"></textarea>
+			<label class="item item-input item-stacked-label">
+    <span class="input-label">Name: </span>
+    <input type="text" placeholder="Your Name">
+  </label>
+	<label class="item item-input item-stacked-label">
+    <span class="input-label">Email: </span>
+    <input type="text" placeholder="Your Email">
+  </label>
+			<label class="item item-input item-stacked-label">
+			    <span class="input-label">Suggestion :</span>
+			    <textarea name="Text1" cols="40" rows="10"  placeholder="Your Message" ></textarea>
 			    </label>
-			</div>
-
-  </ion-content>
-  <a href="#/app/dashboard">
-		<div class="bottomButton">
-			Send
 		</div>
-  </a>
+
+		<!--<button class="form-control-feedback">
+   Send
+</button>-->
+		<!--<a href="#/app/dashboard">
+			<div class="form-control-feedback">
+				Send
+			</div>
+		</a>-->
+	</ion-content>
+	<ion-footer-bar>
+  <button class="bar bar-footer bar-positive">
+    <p class="customtitle" >Send<p>
+  </button>
+</ion-footer-bar>
+
 </ion-view>

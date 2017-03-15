@@ -1,77 +1,93 @@
 <ion-view view-title="Manage Information">
-  <ion-nav-buttons side="left">
-    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-  </ion-nav-buttons>
-  <ion-content class="has-header">
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	<ion-content class="has-header" id="Managecontact">
+		<div class="row">
+			<div class="col col-10"></div>
+			<div class="col Managecontact-heading">
+				<h3><span style="font-size: 18px;"> Personal Information</span></h3>
 
-       		<div style="height:90%;overflow-y: scroll;overflow-x: hidden;">
+			</div>
+			<div class="col col-10"></div>
+
+		</div>
+		<!--<div style="height:98%;overflow-y: scroll;overflow-x: hidden;">-->
 			<div class="list">
-				<h4 style="padding-left: 15px;">Personal Information</h4>
 				<label class="item item-input item-stacked-label">
-			    <div class="input-customlabel"> Name</div>
-			    <input type="text" placeholder="John" class="inputCSS" ng-model="user.name">
+			    <span class="input-label"> Name</span>
+			    <input type="text" placeholder="John"  ng-model="user.name">
 			    </label>
 				<label class="item item-input item-stacked-label">
-			    <div class="input-customlabel">Mobile</div>
-			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.mobile">
+			   <span class="input-label">Mobile</span>
+			    <input type="text" placeholder="1234567890" class="" ng-model="user.mobile">
 			    </label>
 				<label class="item item-input item-stacked-label">
-			    <div class="input-customlabel">Email</div>
-			    <input type="text" placeholder="john@xxx.com" class="inputCSS" ng-model="user.email">
+			   <span class="input-label">Email</span>
+			    <input type="text" placeholder="john@xxx.com"  ng-model="user.email">
 			    </label>
-			    <label class="item item-input item-stacked-label">
-			    <div class="input-customlabel">State</div>
+				<label class="item item-input item-stacked-label">
+			    <span class="input-label">State</span>
 			    	<select id="StateID" name="geonameId" ng-model="user.SelectedState.ID" ng-change="updateCities(user.SelectedState)" ng-options="user as user.name for user in countries|orderBy:'name'" class="selectCSS">
                         <option value="" selected>Select the state</option>
                         <!--<option ng-repeat="country in countries" value="{{country.id}}">{{country.name}}</option>-->               
                     </select>
 			    </label>
-			    <label class="item item-input item-stacked-label">
-			    <div class="input-customlabel">City</div>
+				<label class="item item-input item-stacked-label">
+			   <span class="input-label">City</span>
 			    	<select id="cityID" name="cityId" ng-model="user.SelectedOption.ID" ng-change="updateDetails(user.SelectedOption)" ng-options="user as user.name for user in cities|orderBy:'name'" class="selectCSS">
                         <option value="" selected>Select the city</option>
                         <!--<option ng-repeat="city in cities" value="{{city.id}}">{{city.name}}</option>-->
                     </select>
 			    </label>
 				<label class="item item-input item-stacked-label">
-			    <div class="input-customlabel">Blood Group(Optional)</div>
+			  <span class="input-label">Blood Group(Optional)</span>
 			     	<select class="selectCSS" ng-model="user.bloodGroup" ng-options="opt as opt.label for opt in bloodGroupList ">
 			     	</select>
 			    </label>
 			</div>
+			<div class="row">
+				<div class="col col-10"></div>
+				<div class="col Managecontact-heading">
+					<h3><span style="font-size: 15px;">Emergency Contact Information</span></h3>
 
+				</div>
+				<div class="col col-10"></div>
+			</div>
 			<div class="list">
-				<h4 style="padding-left: 15px;">Emergency Contact Information</h4>
+
 				<label class="item item-input item-stacked-label">
-			    <div class="input-customlabel">Contact 1:</div>
-			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact1">
+			   <span class="input-label">Contact 1:</span>
+			    <input type="text" placeholder="1234567890"  ng-model="user.Contact1">
 			    </label>
-			    <label class="item item-input item-stacked-label">
-			    <div class="input-customlabel">Contact 2:</div>
-			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact2">
+				<label class="item item-input item-stacked-label">
+			   <span class="input-label">Contact 2:</span>
+			    <input type="text" placeholder="1234567890"  ng-model="user.Contact2">
 			    </label>
-			    <label class="item item-input item-stacked-label">
-			    <div class="input-customlabel">Contact 3:</div>
-			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact3">
+				<label class="item item-input item-stacked-label">
+			  <span class="input-label">Contact 3:</span>
+			    <input type="text" placeholder="1234567890"  ng-model="user.Contact3">
 			    </label>
-			    <label class="item item-input item-stacked-label">
-			    <div class="input-customlabel">Contact 4:</div>
-			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact4">
+				<label class="item item-input item-stacked-label">
+			   <span class="input-label">Contact 4:</span>
+			    <input type="text" placeholder="1234567890"  ng-model="user.Contact4">
 			    </label>
-			    <label class="item item-input item-stacked-label">
-			    <div class="input-customlabel">Contact 5:</div>
-			    <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact5">
+				<label class="item item-input item-stacked-label">
+			  <span class="input-label">Contact 5:</span>
+			    <input type="text" placeholder="1234567890"  ng-model="user.Contact5">
 			    </label>
-			    <label class="item item-input item-stacked-label">
-			    <div class="input-customlabel"></div>
-			    <!-- <input type="text" placeholder="1234567890" class="inputCSS" ng-model="user.Contact5"> -->
-			    </label>
+				
 			</div>
-			</div>
-  </ion-content>
-  <div>
-	<a ng-Click="btnSave(user)">
-		<div class="bottomButton">Save</div>
-	</a>
-  </div>
+		<!--</div>-->
+	</ion-content>
+	<ion-footer-bar>
+  <button class="bar bar-footer bar-positive" ng-click="btnSave(user)">
+    <p class="customtitle">Save<p>
+  </button>
+</ion-footer-bar>
+	<!--<div>
+		<a ng-Click="btnSave(user)">
+			<div class="bottomButton">Save</div>
+		</a>
+	</div>-->
 </ion-view>
